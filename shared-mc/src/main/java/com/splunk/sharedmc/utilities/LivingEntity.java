@@ -13,7 +13,7 @@ public class LivingEntity {
     private double maxHealth;
 
     public LivingEntity(String type, String name, Point3d location, List potions, double currentHealth, double maxHealth) {
-        this.type = type;
+        this.type = type.toLowerCase();
         this.name = name;
         this.location = location;
         this.potions = potions;
@@ -22,7 +22,7 @@ public class LivingEntity {
     }
 
     public LivingEntity(String type, String name) {
-        this.type = type;
+        this.type = type.toLowerCase();
         this.name = name.replaceAll("§\\S", ""); // Remove the formatting codes;
         this.potions = new ArrayList();
 
@@ -30,7 +30,7 @@ public class LivingEntity {
     }
 
     public LivingEntity(String type, String name, Point3d location) {
-        this.type = type;
+        this.type = type.toLowerCase();
         this.name = name.replaceAll("§\\S", ""); // Remove the formatting codes;
         this.location = location;
         this.potions = new ArrayList();
@@ -60,7 +60,7 @@ public class LivingEntity {
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = type.toLowerCase();
     }
 
     public String getName() {

@@ -11,6 +11,7 @@ import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -44,17 +45,23 @@ public class CreatureEventLogger extends AbstractEventLogger implements Listener
 
         LivingEntity spCreature = new LivingEntity();
         spCreature.setType("creature");
-        spCreature.setCurrentHealth(((org.bukkit.entity.LivingEntity)entity).getHealth());
-        spCreature.setMaxHealth(((org.bukkit.entity.LivingEntity)entity).getMaxHealth());
+        spCreature.setCurrentHealth(((org.bukkit.entity.LivingEntity) entity).getHealth());
+        spCreature.setMaxHealth(((org.bukkit.entity.LivingEntity) entity).getMaxHealth());
         spCreature.setLocation(coordinates);
 
-        for (PotionEffect potion : (((org.bukkit.entity.LivingEntity)entity).getActivePotionEffects())) {
+        for (PotionEffect potion : (((org.bukkit.entity.LivingEntity) entity).getActivePotionEffects())) {
             spCreature.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());
         }
 
         if (event.getEntityType() == EntityType.SKELETON) {
             Skeleton skeleton = (org.bukkit.entity.Skeleton) event.getEntity();
             spCreature.setName(skeleton.getSkeletonType() + "_SKELETON");
+        } else if (event.getEntityType() == EntityType.ZOMBIE) {
+            Zombie zombie = (org.bukkit.entity.Zombie) event.getEntity();
+
+            // Using deprecated feature because alternative option is not available.
+            spCreature.setName(zombie.getName());
+            spCreature.setType(zombie.getVillagerProfession().name() + "_zombie");
         } else {
             spCreature.setName(event.getEntityType().name());
         }

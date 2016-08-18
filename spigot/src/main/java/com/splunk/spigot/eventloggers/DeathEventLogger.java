@@ -12,6 +12,7 @@ import org.bukkit.World;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -61,11 +62,18 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             if (event.getEntityType() == EntityType.SKELETON) {
                 Skeleton skeleton = (org.bukkit.entity.Skeleton) event.getEntity();
 
-                spVictim = new LivingEntity("creature", skeleton.getSkeletonType() + "_SKELETON", victimLocation);
+                spVictim = new LivingEntity(skeleton.getSkeletonType() + "_skeleton", victim.getName(), victimLocation);
 
 
-            } else {
-                spVictim = new LivingEntity("creature", victim.getName(), victimLocation);
+            }
+            else if (event.getEntityType() == EntityType.ZOMBIE) {
+                Zombie zombie = (org.bukkit.entity.Zombie)event.getEntity();
+
+                // Using deprecated feature because alternative option is not available.
+                spVictim = new LivingEntity(zombie.getVillagerProfession().name() + "_zombie", victim.getName(), victimLocation);
+            }
+            else {
+                spVictim = new LivingEntity(victim.getType().name(), victim.getName(), victimLocation);
 
             }
         }
@@ -117,7 +125,7 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
 
                 if (matcher.matches()) {
 
-                    deathEvent.setKiller(new LivingEntity("creature", matcher.group("killer")));
+                    deathEvent.setKiller(new LivingEntity(matcher.group("killer"), matcher.group("killer")));
 
                 }
 
