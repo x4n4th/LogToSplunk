@@ -224,6 +224,12 @@ public class MCItemCatalogue implements Iterable<MCItem> {
                 case "farmland":
                     item.setText_type("SOIL");
                     break;
+                case "beetroots":
+                    item.setText_type("BEETROOT _BLOCK");
+                    break;
+                case "wheat_seeds":
+                    item.setText_type("CROPS");
+                    break;
                 default:
                     item.setText_type(item.getText_type().toUpperCase());
                     break;
