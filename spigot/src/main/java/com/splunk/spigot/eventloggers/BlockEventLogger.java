@@ -89,7 +89,11 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
 
             ItemStack instrument = ((BlockBreakEvent) event).getPlayer().getInventory().getItemInMainHand();
-            Instrument tool = new Instrument(instrument.getType().toString());
+
+            // Some items have "_ITEM" appended to the end.
+            String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
+
+            Instrument tool = new Instrument(instrumentName);
             for (Enchantment key : instrument.getEnchantments().keySet()) {
 
                 tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
