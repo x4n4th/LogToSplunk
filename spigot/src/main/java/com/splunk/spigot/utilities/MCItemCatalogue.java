@@ -1,6 +1,7 @@
 package com.splunk.spigot.utilities;
 
 import com.google.gson.Gson;
+import org.bukkit.block.Block;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -243,5 +244,30 @@ public class MCItemCatalogue implements Iterable<MCItem> {
 
     public Iterator<MCItem> iterator() {
         return MCItems.iterator();
+    }
+
+    public String getBlockName(Block block) {
+
+        String blockName = "UNKNOWN";
+
+        for (MCItem item : this.getMCItems()) {
+
+
+            // First match type <--> MATERIAL
+            if (item.getText_type().equals(block.getType().toString())) {
+
+                // Default to base block for types where durability means something else like direction facing.
+                blockName = item.getText_type();
+
+                // Next match on meta number
+                if (item.getMeta() == block.getState().getData().toItemStack().getDurability()) {
+                    blockName = item.getName();
+                    return blockName;
+                }
+            }
+
+
+        }
+        return blockName;
     }
 }

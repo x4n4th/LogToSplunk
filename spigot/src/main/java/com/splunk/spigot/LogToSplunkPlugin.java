@@ -1,9 +1,6 @@
 package com.splunk.spigot;
 
-import com.splunk.spigot.eventloggers.BlockEventLogger;
-import com.splunk.spigot.eventloggers.CreatureEventLogger;
-import com.splunk.spigot.eventloggers.DeathEventLogger;
-import com.splunk.spigot.eventloggers.PlayerEventLogger;
+import com.splunk.spigot.eventloggers.*;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 
 import org.apache.logging.log4j.LogManager;
@@ -77,6 +74,9 @@ public class LogToSplunkPlugin extends JavaPlugin implements Listener {
 
         if (Boolean.valueOf(properties.getProperty("splunk.craft.logging.death.enable", "true")))
             getServer().getPluginManager().registerEvents(new DeathEventLogger(properties), this);
+
+        if (Boolean.valueOf(properties.getProperty("splunk.craft.logging.world.enable", "false")))
+            getServer().getPluginManager().registerEvents(new WorldEventLogger(properties), this);
 
 
     }

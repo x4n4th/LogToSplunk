@@ -75,7 +75,7 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
         LoggableBlockEvent blockEvent = new LoggableBlockEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
         Point3d boxLocation = new Point3d(location.getX(), location.getY(), location.getZ());
-        blockEvent.setBlock(new com.splunk.sharedmc.utilities.Block(block.getType().toString(), getBlockName(block), boxLocation));
+        blockEvent.setBlock(new com.splunk.sharedmc.utilities.Block(block.getType().toString(), MCItems.getBlockName(block), boxLocation));
 
 
         if (event instanceof BlockBreakEvent) {
@@ -141,31 +141,6 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
 
         return blockEvent;
-    }
-
-    public String getBlockName(Block block) {
-
-        String blockName = "UNKNOWN";
-
-        for (MCItem item : MCItems.getMCItems()) {
-
-
-            // First match type <--> MATERIAL
-            if (item.getText_type().equals(block.getType().toString())) {
-
-                // Default to base block for types where durability means something else like direction facing.
-                blockName = item.getText_type();
-
-                // Next match on meta number
-                if (item.getMeta() == block.getState().getData().toItemStack().getDurability()) {
-                    blockName = item.getName();
-                    return blockName;
-                }
-            }
-
-
-        }
-        return blockName;
     }
 
 }

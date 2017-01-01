@@ -7,6 +7,8 @@ public class Block {
     private String item;
     private Point3d location;
 
+    private Biome biome;
+
     public Block(String base_type, String item, Point3d location) {
         this.base_type = base_type;
         this.item = item;
@@ -37,5 +39,7 @@ public class Block {
         this.location = location;
     }
 
-
+    public void setBiome(Biome biome) {
+        this.biome = biome;
+    }
 }
