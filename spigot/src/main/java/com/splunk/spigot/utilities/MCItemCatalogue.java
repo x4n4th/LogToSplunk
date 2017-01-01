@@ -225,7 +225,7 @@ public class MCItemCatalogue implements Iterable<MCItem> {
                     item.setText_type("SOIL");
                     break;
                 case "beetroots":
-                    item.setText_type("BEETROOT _BLOCK");
+                    item.setText_type("BEETROOT_BLOCK");
                     break;
                 case "wheat_seeds":
                     item.setText_type("CROPS");
