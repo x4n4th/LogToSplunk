@@ -32,7 +32,7 @@ public class WorldEventLogger extends AbstractEventLogger implements Listener {
         for(int x = 0; x < 16; x++){
             for(int z = 0; z < 16; z++){
 
-                int y = snapshot.getHighestBlockYAt(x, z) - 1;
+                int y = snapshot.getHighestBlockYAt(x, z);
 
                 org.bukkit.block.Block mcBlock = event.getChunk().getBlock(x, y, z);
 

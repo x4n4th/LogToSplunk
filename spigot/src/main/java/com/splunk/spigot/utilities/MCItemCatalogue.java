@@ -231,6 +231,9 @@ public class MCItemCatalogue implements Iterable<MCItem> {
                 case "wheat_seeds":
                     item.setText_type("CROPS");
                     break;
+                case "water":
+                    item.setText_type("STATIONARY_WATER");
+                    break;
                 default:
                     item.setText_type(item.getText_type().toUpperCase());
                     break;
