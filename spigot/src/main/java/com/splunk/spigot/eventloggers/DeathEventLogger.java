@@ -109,6 +109,8 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
                 tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
             }
 
+            tool.setName(instrument.getItemMeta().getDisplayName());
+
             deathEvent.setWeapon(tool);
 
 
