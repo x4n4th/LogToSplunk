@@ -78,6 +78,9 @@ public class LogToSplunkPlugin extends JavaPlugin implements Listener {
         if (Boolean.valueOf(properties.getProperty("splunk.craft.logging.world.enable", "false")))
             getServer().getPluginManager().registerEvents(new WorldEventLogger(properties), this);
 
+        if (Boolean.valueOf(properties.getProperty("splunk.craft.logging.damage.enable", "true")))
+            getServer().getPluginManager().registerEvents(new DamageEventLogger(properties), this);
+
 
     }
 

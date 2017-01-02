@@ -1,24 +1,23 @@
 package com.splunk.sharedmc.loggable_events;
 
-import com.splunk.sharedmc.utilities.LivingEntity;
+import com.splunk.sharedmc.utilities.LivingLoggerEntity;
 
 public class LoggableCreatureEvent extends AbstractLoggableEvent {
 
 
-    private LivingEntity entity;
+    private LivingLoggerEntity entity;
 
     public LoggableCreatureEvent(long gameTime, String minecraft_server, String world, EntityEventAction action) {
         super(gameTime, minecraft_server, world, "creature", action.asString());
     }
 
-    public LivingEntity getEntity() {
+    public LivingLoggerEntity getEntity() {
         return entity;
     }
 
-    public void setEntity(LivingEntity entity) {
+    public void setEntity(LivingLoggerEntity entity) {
         this.entity = entity;
     }
-
 
     public enum EntityEventAction {
         SPAWN("spawn");

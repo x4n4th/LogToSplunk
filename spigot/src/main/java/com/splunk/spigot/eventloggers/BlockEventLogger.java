@@ -4,9 +4,8 @@ import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
 import com.splunk.sharedmc.loggable_events.LoggableBlockEvent;
 import com.splunk.sharedmc.loggable_events.LoggableBlockEvent.BlockEventAction;
 import com.splunk.sharedmc.utilities.Instrument;
-import com.splunk.sharedmc.utilities.LivingEntity;
+import com.splunk.sharedmc.utilities.LivingLoggerEntity;
 import com.splunk.sharedmc.utilities.Point3d;
-import com.splunk.spigot.utilities.MCItem;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 
 import org.bukkit.Location;
@@ -82,7 +81,7 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
             Player player = ((BlockBreakEvent) event).getPlayer();
 
-            LivingEntity spEntity = new LivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
+            LivingLoggerEntity spEntity = new LivingLoggerEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
             spEntity.setPitch(player.getLocation().getPitch());
@@ -111,7 +110,7 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
         } else if (event instanceof BlockPlaceEvent) {
             Player player = ((BlockPlaceEvent) event).getPlayer();
 
-            LivingEntity spEntity = new LivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
+            LivingLoggerEntity spEntity = new LivingLoggerEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
             spEntity.setPitch(location.getPitch());
