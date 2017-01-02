@@ -8,8 +8,8 @@ public class LivingLoggerEntity extends LoggerEntity {
     private List potions;
     private double currentHealth;
     private double maxHealth;
-    private float yaw;
-    private float pitch;
+    private double yaw;
+    private double pitch;
 
     public LivingLoggerEntity(String type, String name, Point3d location, List potions, double currentHealth, double maxHealth) {
         super(type, name, location);
@@ -64,11 +64,11 @@ public class LivingLoggerEntity extends LoggerEntity {
     }
 
     public void setYaw(float yaw) {
-        this.yaw = yaw;
+        this.yaw = Math.round(yaw * 100.00) / 100.00;;
     }
 
     public void setPitch(float pitch) {
-        this.pitch = pitch;
+        this.pitch = Math.round(pitch * 100.00) / 100.00;
     }
 
 }

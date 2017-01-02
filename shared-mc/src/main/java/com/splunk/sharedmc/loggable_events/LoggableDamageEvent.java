@@ -27,11 +27,11 @@ public class LoggableDamageEvent extends AbstractLoggableEvent {
     }
 
     public void setDamageRaw(double damageRaw) {
-        this.damageRaw = damageRaw;
+        this.damageRaw = Math.round(damageRaw * 100.00) / 100.00;
     }
 
     public void setDamageFinal(double damageFinal) {
-        this.damageFinal = damageFinal;
+        this.damageFinal = Math.round(damageFinal * 100.00) / 100.00;
     }
 
     public void setTool(Instrument tool) {
