@@ -86,6 +86,8 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
             blockEvent.setPlayer(spEntity);
+            spEntity.setPitch(location.getPitch());
+            spEntity.setYaw(location.getYaw());
 
 
             ItemStack instrument = ((BlockBreakEvent) event).getPlayer().getInventory().getItemInMainHand();
@@ -112,6 +114,8 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
             LivingEntity spEntity = new LivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
+            spEntity.setPitch(location.getPitch());
+            spEntity.setYaw(location.getYaw());
             blockEvent.setPlayer(spEntity);
         } else if (event instanceof BlockIgniteEvent) {
 
