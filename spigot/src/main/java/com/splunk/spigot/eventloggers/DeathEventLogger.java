@@ -70,6 +70,8 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             }
         }
 
+        spVictim.setYaw(location.getYaw());
+        spVictim.setPitch(location.getPitch());
 
         for (PotionEffect potion : event.getEntity().getActivePotionEffects()) {
             spVictim.addPotions(potion.getType().getName() + ":" + potion.getAmplifier() );
@@ -80,7 +82,6 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
 
         deathEvent.setVictim(spVictim);
 
-
         if (event.getEntity().getKiller() != null) {
 
             Point3d killerLocation = new Point3d(event.getEntity().getKiller().getLocation().getX(), event.getEntity().getKiller().getLocation().getY(), event.getEntity().getKiller().getLocation().getZ());
@@ -88,20 +89,21 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             org.bukkit.entity.LivingEntity killer = event.getEntity().getKiller();
             LivingEntity spKiller = new LivingEntity("player", killer.getName(), killerLocation);
 
+            spKiller.setYaw(event.getEntity().getKiller().getLocation().getYaw());
+            spKiller.setPitch(event.getEntity().getKiller().getLocation().getPitch());
 
             for (PotionEffect potion : killer.getActivePotionEffects()) {
                 spKiller.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());
             }
+
             spKiller.setCurrentHealth(killer.getHealth());
             spKiller.setMaxHealth(killer.getMaxHealth());
             deathEvent.setKiller(spKiller);
-
 
             ItemStack instrument = event.getEntity().getKiller().getInventory().getItemInMainHand();
 
             // Some items have "_ITEM" appended to the end.
             String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
-
 
             Instrument tool = new Instrument(instrumentName);
             for (Enchantment key : instrument.getEnchantments().keySet()) {
@@ -112,7 +114,6 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             tool.setName(instrument.getItemMeta().getDisplayName());
 
             deathEvent.setWeapon(tool);
-
 
         } else {
             // Creature did killing and we have to get killer from death message
@@ -125,14 +126,9 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
                 if (matcher.matches()) {
 
                     deathEvent.setKiller(new LivingEntity("creature", matcher.group("killer")));
-
                 }
-
-
             }
         }
-
-
         return deathEvent;
     }
 

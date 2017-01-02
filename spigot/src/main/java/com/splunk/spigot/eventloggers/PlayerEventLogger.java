@@ -71,6 +71,9 @@ public class PlayerEventLogger extends AbstractEventLogger implements Listener {
         eventPlayer.setMaxHealth(player.getMaxHealth());
         eventPlayer.setCurrentHealth(player.getHealth());
 
+        eventPlayer.setYaw(location.getYaw());
+        eventPlayer.setPitch(location.getPitch());
+
 
         for (PotionEffect potion : player.getActivePotionEffects()) {
             eventPlayer.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());

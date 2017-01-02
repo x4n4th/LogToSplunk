@@ -11,6 +11,8 @@ public class LivingEntity {
     private List potions;
     private double currentHealth;
     private double maxHealth;
+    private float yaw;
+    private float pitch;
 
     public LivingEntity(String type, String name, Point3d location, List potions, double currentHealth, double maxHealth) {
         this.type = type;
@@ -90,4 +92,13 @@ public class LivingEntity {
     public void addPotions(String item) {
         potions.add(item);
     }
+
+    public void setYaw(float yaw) {
+        this.yaw = yaw;
+    }
+
+    public void setPitch(float pitch) {
+        this.pitch = pitch;
+    }
+
 }
