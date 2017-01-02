@@ -39,3 +39,6 @@ splunk.craft.logging.death.enable=true
 
 splunk.craft.logging.world.enable=false
 # Enables or disables the logging of world events. (Chunk load, Biome / Height map)
+
+splunk.craft.logging.damage.enable=true
+# Enables or disables the logging of damage (player, creature, item) events.
