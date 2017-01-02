@@ -65,7 +65,7 @@ public class DamageEventLogger extends AbstractEventLogger implements Listener {
             Entity attacker = ((EntityDamageByEntityEvent) event).getDamager();
 
             if(attacker instanceof Projectile){
-                attacker = (Entity)((Arrow) attacker).getShooter();
+                attacker = (Entity)((Projectile) attacker).getShooter();
             }
 
             if(attacker instanceof Player){
@@ -82,6 +82,7 @@ public class DamageEventLogger extends AbstractEventLogger implements Listener {
 
         loggableEvent.setDamageRaw(damageRaw);
         loggableEvent.setDamageFinal(damageFinal);
+        loggableEvent.setCause(cause);
 
         return loggableEvent;
     }

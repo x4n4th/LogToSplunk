@@ -36,7 +36,6 @@ public class WorldEventLogger extends AbstractEventLogger implements Listener {
 
                 org.bukkit.block.Block mcBlock = event.getChunk().getBlock(x, y, z);
 
-
                 String biomeName = mcBlock.getBiome().name();
 
                 Point3d boxLocation = new Point3d(mcBlock.getX(), mcBlock.getY(), mcBlock.getZ());
