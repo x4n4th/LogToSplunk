@@ -85,10 +85,10 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
             LivingEntity spEntity = new LivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
-            blockEvent.setPlayer(spEntity);
-            spEntity.setPitch(location.getPitch());
-            spEntity.setYaw(location.getYaw());
+            spEntity.setPitch(player.getLocation().getPitch());
+            spEntity.setYaw(player.getLocation().getPitch());
 
+            blockEvent.setPlayer(spEntity);
 
             ItemStack instrument = ((BlockBreakEvent) event).getPlayer().getInventory().getItemInMainHand();
 
