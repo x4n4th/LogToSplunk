@@ -156,13 +156,13 @@
     "type": 7
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Flowing Water",
     "material": "flowing_water",
     "type": 8
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Water",
     "material": "stationary_water",
     "type": 9
@@ -402,19 +402,19 @@
     "type": 26
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Powered Rail",
     "material": "powered_rail",
     "type": 27
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Detector Rail",
     "material": "detector_rail",
     "type": 28
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Sticky Piston",
     "material": "piston_sticky_base",
     "type": 29
@@ -450,7 +450,7 @@
     "type": 32
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Piston",
     "material": "piston_base",
     "type": 33
@@ -984,7 +984,7 @@
     "type": 59
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Farmland",
     "material": "soil",
     "type": 60
@@ -1020,7 +1020,7 @@
     "type": 65
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Rail",
     "material": "rails",
     "type": 66
@@ -1090,7 +1090,7 @@
     "orientation" : "Down"
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Wall-mounted Sign Block",
     "material": "wall_sign",
     "type": 68
@@ -1102,7 +1102,7 @@
     "type": 69
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Stone Pressure Plate",
     "material": "stone_plate",
     "type": 70
@@ -1114,7 +1114,7 @@
     "type": 71
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Wooden Pressure Plate",
     "material": "wood_plate",
     "type": 72
@@ -1132,13 +1132,13 @@
     "type": 74
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Redstone Torch (off)",
     "material": "redstone_torch_off",
     "type": 75
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Redstone Torch (on)",
     "material": "redstone_torch_on",
     "type": 76
@@ -1150,7 +1150,7 @@
     "type": 77
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Snow",
     "material": "snow",
     "type": 78
@@ -1168,7 +1168,7 @@
     "type": 80
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Cactus",
     "material": "cactus",
     "type": 81
@@ -1180,7 +1180,7 @@
     "type": 82
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Sugar Canes",
     "material": "sugar_cane_block",
     "type": 83
@@ -1198,7 +1198,7 @@
     "type": 85
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Pumpkin",
     "material": "pumpkin",
     "type": 86
@@ -1222,13 +1222,13 @@
     "type": 89
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Nether Portal",
     "material": "portal",
     "type": 90
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Jack o'Lantern",
     "material": "jack_o_lantern",
     "type": 91
@@ -1240,13 +1240,13 @@
     "type": 92
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Redstone Repeater Block (off)",
     "material": "diode_block_off",
     "type": 93
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Redstone Repeater Block (on)",
     "material": "powered_repeater",
     "type": 94
@@ -1348,7 +1348,7 @@
     "type": 95
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Wooden Trapdoor",
     "material": "trap_door",
     "type": 96
@@ -1414,13 +1414,13 @@
     "type": 98
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Brown Mushroom Block",
     "material": "huge_mushroom_1",
     "type": 99
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Red Mushroom Block",
     "material": "huge_mushroom_2",
     "type": 100
@@ -1714,7 +1714,7 @@
     "type": 119
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Ender Portal Frame",
     "material": "ender_portal_frame",
     "type": 120
@@ -2150,19 +2150,19 @@
     "orientation" : "Down"
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Command Block",
     "material": "command",
     "type": 137
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Command Repeating Block",
     "material": "command_repeating",
     "type": 210
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Command Chain Block",
     "material": "command_chain",
     "type": 211
@@ -2228,13 +2228,13 @@
     "type": 146
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Weighted Pressure Plate (light)",
     "material": "gold_plate",
     "type": 147
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Weighted Pressure Plate (heavy)",
     "material": "iron_plate",
     "type": 148
@@ -2358,7 +2358,7 @@
     "orientation" : "Down"
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Activator Rail",
     "material": "activator_rail",
     "type": 157
@@ -2762,7 +2762,7 @@
     "type": 166
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Iron Trapdoor",
     "material": "iron_trapdoor",
     "type": 167
@@ -2948,7 +2948,7 @@
     "type": 175
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Tall Plant",
     "material": "double_plant",
     "type": 175
@@ -3730,7 +3730,7 @@
     "type": 322
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Sign",
     "material": "sign_post",
     "type": 323
@@ -3820,7 +3820,7 @@
     "type": 337
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Sugar Canes",
     "material": "reeds",
     "type": 338
@@ -4030,20 +4030,20 @@
     "type": 353
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Cake",
     "material": "cake_block",
     "type": 354
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Bed Block",
     "material": "bed_block",
     "type": 355,
     "cardinal" : "South"
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Redstone Repeater",
     "material": "diode_block_on",
     "type": 356
@@ -4523,7 +4523,7 @@
     "type": 403
   },
   {
-    "meta": -1,
+    "meta": 0,
     "name": "Redstone Comparator",
     "material": "redstone_comparator_off",
     "type": 404

@@ -1,11 +1,11 @@
 package com.splunk.spigot.eventloggers;
 
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggablePlayerEvent;
-import com.splunk.sharedmc.loggable_events.LoggablePlayerEvent.PlayerEventAction;
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.events.LoggablePlayerEvent;
+import com.splunk.sharedmc.logger.events.LoggablePlayerEvent.PlayerEventAction;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -66,7 +66,7 @@ public class PlayerEventLogger extends AbstractEventLogger implements Listener {
 
         LoggablePlayerEvent playerEvent = new LoggablePlayerEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
-        LivingLoggerEntity eventPlayer = new LivingLoggerEntity("player", player.getDisplayName());
+        LoggableLivingEntity eventPlayer = new LoggableLivingEntity("player", player.getDisplayName());
 
         eventPlayer.setMaxHealth(player.getMaxHealth());
         eventPlayer.setCurrentHealth(player.getHealth());

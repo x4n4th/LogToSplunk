@@ -1,4 +1,4 @@
-package com.splunk.sharedmc.loggable_events;
+package com.splunk.sharedmc.logger.events;
 
 /**
  * Categories of loggable events.

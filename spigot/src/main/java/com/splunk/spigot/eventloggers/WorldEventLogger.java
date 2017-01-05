@@ -1,12 +1,12 @@
 package com.splunk.spigot.eventloggers;
 
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggableWorldEvent;
-import com.splunk.sharedmc.utilities.Biome;
-import com.splunk.sharedmc.utilities.Block;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.entities.LoggableBlock;
+import com.splunk.sharedmc.logger.events.LoggableWorldEvent;
+import com.splunk.sharedmc.logger.entities.LoggableBiome;
 
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 import org.bukkit.Bukkit;
 import org.bukkit.ChunkSnapshot;
@@ -49,8 +49,8 @@ public class WorldEventLogger extends AbstractEventLogger implements Listener {
                 Point3d boxLocation = new Point3d(mcBlock.getX(), mcBlock.getY(), mcBlock.getZ());
 
                 try{
-                    Block b = new Block(mcBlock.getType().toString(), MCItems.getBlockName(mcBlock), boxLocation);
-                    b.setBiome(new Biome(biomeName));
+                    LoggableBlock b = new LoggableBlock(mcBlock.getType().toString(), MCItems.getBlockName(mcBlock), boxLocation);
+                    b.setBiome(new LoggableBiome(biomeName));
 
                     LoggableWorldEvent loggableEvent = getLoggablePlayerEvent(LoggableWorldEvent.WorldEventAction.CHUNK_POPULATE, event);
 

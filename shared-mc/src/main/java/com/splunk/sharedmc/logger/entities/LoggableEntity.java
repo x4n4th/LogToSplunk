@@ -1,25 +1,25 @@
-package com.splunk.sharedmc.utilities;
+package com.splunk.sharedmc.logger.entities;
 
 
-import java.util.List;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
-public abstract class LoggerEntity {
+public abstract class LoggableEntity {
     private String type;
     private String name;
     private Point3d location;
 
-    public LoggerEntity(String type, String name, Point3d location){
+    public LoggableEntity(String type, String name, Point3d location){
         this.type = type;
         this.name = name;
         this.location = location;
     }
 
-    public LoggerEntity(String type, String name) {
+    public LoggableEntity(String type, String name) {
         this.type = type;
         this.name = name;
     }
 
-    public LoggerEntity() {
+    public LoggableEntity() {
     }
 
     public Point3d getLocation() {

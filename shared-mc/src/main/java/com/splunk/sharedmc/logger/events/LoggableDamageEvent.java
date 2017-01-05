@@ -1,28 +1,27 @@
-package com.splunk.sharedmc.loggable_events;
+package com.splunk.sharedmc.logger.events;
 
-import com.splunk.sharedmc.utilities.Instrument;
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
-import com.splunk.sharedmc.utilities.LoggerEntity;
+import com.splunk.sharedmc.logger.entities.LoggableInstrument;
+import com.splunk.sharedmc.logger.entities.LoggableEntity;
 
 public class LoggableDamageEvent extends AbstractLoggableEvent {
 
 
-    private LoggerEntity assailant;
-    private LoggerEntity victim;
+    private LoggableEntity attacker;
+    private LoggableEntity victim;
     private double damageRaw;
     private double damageFinal;
-    private Instrument tool;
+    private LoggableInstrument tool;
     private String cause;
 
     public LoggableDamageEvent(long gameTime, String minecraft_server, String world, String category, EntityDamageEventAction action) {
         super(gameTime, minecraft_server, world, category, action.asString());
     }
 
-    public void setAssailant(LoggerEntity assailant) {
-        this.assailant = assailant;
+    public void setAttacker(LoggableEntity attacker) {
+        this.attacker = attacker;
     }
 
-    public void setVictim(LoggerEntity victim) {
+    public void setVictim(LoggableEntity victim) {
         this.victim = victim;
     }
 
@@ -34,7 +33,7 @@ public class LoggableDamageEvent extends AbstractLoggableEvent {
         this.damageFinal = Math.round(damageFinal * 100.00) / 100.00;
     }
 
-    public void setTool(Instrument tool) {
+    public void setTool(LoggableInstrument tool) {
         this.tool = tool;
     }
 

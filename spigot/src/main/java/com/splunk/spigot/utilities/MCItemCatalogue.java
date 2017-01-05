@@ -15,7 +15,7 @@ import static org.bukkit.Bukkit.*;
 public class MCItemCatalogue implements Iterable<MCItem> {
 
     private static MCItemCatalogue instance = null;
-    private List<MCItem> MCItems = new ArrayList<>();
+    private Map<String, MCItem> mcItems = new HashMap<>();
 
     public Logger log;
 
@@ -28,12 +28,12 @@ public class MCItemCatalogue implements Iterable<MCItem> {
         return instance;
     }
 
-    public List<MCItem> getMCItems() {
-        return MCItems;
+    public Map<String, MCItem>  getMCItems() {
+        return mcItems;
     }
 
-    public void setMCItems(List<MCItem> MCItems) {
-        this.MCItems = MCItems;
+    public void setMCItems(Map<String, MCItem>  MCItems) {
+        this.mcItems = MCItems;
     }
 
     public void parseItemsFile(String contents) {
@@ -47,39 +47,37 @@ public class MCItemCatalogue implements Iterable<MCItem> {
         log.info("Loaded " + mcItems.length + " items");
 
         for (MCItem item : mcItems) {
-            log.info("Material: " + item.getMaterial());
-
-            MCItems.add(item);
+            String key = item.getMaterial().toLowerCase() + item.getMeta();
+            this.mcItems.put(key, item);
         }
 
     }
 
     public Iterator<MCItem> iterator() {
-        return MCItems.iterator();
+        return this.mcItems.values().iterator();
     }
 
     public String getBlockName(Block block) throws Exception{
         BlockState state =  block.getState();
 
-        Material material = state.getType();
+        String material = state.getType().toString().toLowerCase();
         int meta = state.getData().toItemStack().getDurability();
 
-        for (MCItem item : this.getMCItems()) {
 
-            // First match type <--> MATERIAL
-            if (item.getMaterial().equalsIgnoreCase(material.toString())) {
+        MCItem item = this.mcItems.get(material + meta);
 
-                // Next match on meta number
-                if (item.getMeta() == meta || item.getMeta() == -1) {
-                    return item.getName();
-                }
-            }
+        if(item == null){
+            item = this.mcItems.get(material + 0);
         }
 
-        log.warning("Could not find Block in items.json " +
-                "\nBlock: " + material.toString().toLowerCase() +
+        if(item != null){
+            return item.getName();
+        }
+
+        log.warning("Could not find LoggableBlock in items.json " +
+                "\nLoggableBlock: " + material.toString().toLowerCase() +
                 "\nMeta: " + meta);
 
-        throw new Exception("Block not found");
+        throw new Exception("LoggableBlock not found");
     }
 }

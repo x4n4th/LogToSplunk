@@ -1,15 +1,15 @@
-package com.splunk.sharedmc.utilities;
+package com.splunk.sharedmc.logger.entities;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Instrument {
+public class LoggableInstrument {
 
     private String item;
     private String name;
     private List enchantments;
 
-    public Instrument(String item) {
+    public LoggableInstrument(String item) {
         this.enchantments = new ArrayList();
         this.item = item;
     }

@@ -1,11 +1,12 @@
 package com.splunk.spigot.eventloggers;
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggableBlockEvent;
-import com.splunk.sharedmc.loggable_events.LoggableBlockEvent.BlockEventAction;
-import com.splunk.sharedmc.utilities.Instrument;
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.entities.LoggableBlock;
+import com.splunk.sharedmc.logger.events.LoggableBlockEvent;
+import com.splunk.sharedmc.logger.events.LoggableBlockEvent.BlockEventAction;
+import com.splunk.sharedmc.logger.entities.LoggableInstrument;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 
 import org.bukkit.Bukkit;
@@ -93,14 +94,14 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
         LoggableBlockEvent blockEvent = new LoggableBlockEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
         Point3d boxLocation = new Point3d(location.getX(), location.getY(), location.getZ());
-        blockEvent.setBlock(new com.splunk.sharedmc.utilities.Block(block.getType().toString(), MCItems.getBlockName(block), boxLocation));
+        blockEvent.setBlock(new LoggableBlock(block.getType().toString(), MCItems.getBlockName(block), boxLocation));
 
 
         if (event instanceof BlockBreakEvent) {
 
             Player player = ((BlockBreakEvent) event).getPlayer();
 
-            LivingLoggerEntity spEntity = new LivingLoggerEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
+            LoggableLivingEntity spEntity = new LoggableLivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
             spEntity.setPitch(player.getLocation().getPitch());
@@ -113,7 +114,7 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
             // Some items have "_ITEM" appended to the end.
             String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
 
-            Instrument tool = new Instrument(instrumentName);
+            LoggableInstrument tool = new LoggableInstrument(instrumentName);
             for (Enchantment key : instrument.getEnchantments().keySet()) {
 
                 tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
@@ -129,7 +130,7 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
         } else if (event instanceof BlockPlaceEvent) {
             Player player = ((BlockPlaceEvent) event).getPlayer();
 
-            LivingLoggerEntity spEntity = new LivingLoggerEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
+            LoggableLivingEntity spEntity = new LoggableLivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
             spEntity.setCurrentHealth(player.getHealth());
             spEntity.setMaxHealth(player.getMaxHealth());
             spEntity.setPitch(location.getPitch());

@@ -1,10 +1,10 @@
 package com.splunk.spigot.eventloggers;
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggableCreatureEvent;
-import com.splunk.sharedmc.loggable_events.LoggableCreatureEvent.EntityEventAction;
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.events.LoggableCreatureEvent;
+import com.splunk.sharedmc.logger.events.LoggableCreatureEvent.EntityEventAction;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -42,7 +42,7 @@ public class CreatureEventLogger extends AbstractEventLogger implements Listener
 
         LoggableCreatureEvent entityEvent = new LoggableCreatureEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
-        LivingLoggerEntity spCreature = new LivingLoggerEntity();
+        LoggableLivingEntity spCreature = new LoggableLivingEntity();
         spCreature.setType("creature");
         spCreature.setCurrentHealth(((org.bukkit.entity.LivingEntity)entity).getHealth());
         spCreature.setMaxHealth(((org.bukkit.entity.LivingEntity)entity).getMaxHealth());

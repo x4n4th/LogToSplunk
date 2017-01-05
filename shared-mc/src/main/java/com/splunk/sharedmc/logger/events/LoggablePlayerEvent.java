@@ -1,13 +1,13 @@
-package com.splunk.sharedmc.loggable_events;
+package com.splunk.sharedmc.logger.events;
 
 
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
 public class LoggablePlayerEvent extends AbstractLoggableEvent {
 
 
-    private LivingLoggerEntity player;
+    private LoggableLivingEntity player;
     private Point3d src;
     private Point3d dest;
 
@@ -23,11 +23,11 @@ public class LoggablePlayerEvent extends AbstractLoggableEvent {
         this.dest = dest;
     }
 
-    public LivingLoggerEntity getPlayer() {
+    public LoggableLivingEntity getPlayer() {
         return this.player;
     }
 
-    public void setPlayer(LivingLoggerEntity player) {
+    public void setPlayer(LoggableLivingEntity player) {
         this.player = player;
     }
 

@@ -1,9 +1,9 @@
-package com.splunk.sharedmc.loggable_events;
+package com.splunk.sharedmc.logger.events;
 
 
-import com.splunk.sharedmc.utilities.Block;
-import com.splunk.sharedmc.utilities.Instrument;
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
+import com.splunk.sharedmc.logger.entities.LoggableBlock;
+import com.splunk.sharedmc.logger.entities.LoggableInstrument;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 
 /**
  * Almost pojo with fields for information that might be associated with a block event.
@@ -11,37 +11,37 @@ import com.splunk.sharedmc.utilities.LivingLoggerEntity;
 public class LoggableBlockEvent extends AbstractLoggableEvent {
 
 
-    private Block block;
-    private LivingLoggerEntity player;
-    private Instrument tool;
+    private LoggableBlock block;
+    private LoggableLivingEntity player;
+    private LoggableInstrument tool;
     private String cause;
 
     public LoggableBlockEvent(long gameTime, String minecraft_server, String world, BlockEventAction action) {
         super(gameTime, minecraft_server, world, "block", action.asString());
     }
 
-    public LivingLoggerEntity getPlayer() {
+    public LoggableLivingEntity getPlayer() {
         return player;
     }
 
-    public void setPlayer(LivingLoggerEntity player) {
+    public void setPlayer(LoggableLivingEntity player) {
         this.player = player;
     }
 
-    public Block getBlock() {
+    public LoggableBlock getBlock() {
         return this.block;
     }
 
-    public void setBlock(Block block) {
+    public void setBlock(LoggableBlock block) {
         this.block = block;
     }
 
 
-    public Instrument getTool() {
+    public LoggableInstrument getTool() {
         return this.tool;
     }
 
-    public void setTool(Instrument tool) {
+    public void setTool(LoggableInstrument tool) {
         this.tool = tool;
     }
 

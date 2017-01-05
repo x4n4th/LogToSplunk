@@ -1,4 +1,4 @@
-package com.splunk.sharedmc.utilities;
+package com.splunk.sharedmc.logger.utilities;
 
 public class Point3d {
     public final double x;

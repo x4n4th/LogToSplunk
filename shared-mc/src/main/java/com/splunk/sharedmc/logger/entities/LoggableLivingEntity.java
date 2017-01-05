@@ -1,9 +1,11 @@
-package com.splunk.sharedmc.utilities;
+package com.splunk.sharedmc.logger.entities;
+
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LivingLoggerEntity extends LoggerEntity {
+public class LoggableLivingEntity extends LoggableEntity {
 
     private List potions;
     private double currentHealth;
@@ -11,14 +13,14 @@ public class LivingLoggerEntity extends LoggerEntity {
     private double yaw;
     private double pitch;
 
-    public LivingLoggerEntity(String type, String name, Point3d location, List potions, double currentHealth, double maxHealth) {
+    public LoggableLivingEntity(String type, String name, Point3d location, List potions, double currentHealth, double maxHealth) {
         super(type, name, location);
         this.potions = potions;
         this.currentHealth = currentHealth;
         this.maxHealth = maxHealth;
     }
 
-    public LivingLoggerEntity(String type, String name) {
+    public LoggableLivingEntity(String type, String name) {
         super(type, name.replaceAll("§\\S", "")); // Remove the formatting codes;
 
         this.potions = new ArrayList();
@@ -26,13 +28,13 @@ public class LivingLoggerEntity extends LoggerEntity {
 
     }
 
-    public LivingLoggerEntity(String type, String name, Point3d location) {
+    public LoggableLivingEntity(String type, String name, Point3d location) {
         super(type, name.replaceAll("§\\S", ""), location);
 
         this.potions = new ArrayList();
     }
 
-    public LivingLoggerEntity() {
+    public LoggableLivingEntity() {
     }
 
     public List getPotions() {

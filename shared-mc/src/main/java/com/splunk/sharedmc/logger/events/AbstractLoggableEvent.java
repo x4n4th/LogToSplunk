@@ -1,4 +1,4 @@
-package com.splunk.sharedmc.loggable_events;
+package com.splunk.sharedmc.logger.events;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

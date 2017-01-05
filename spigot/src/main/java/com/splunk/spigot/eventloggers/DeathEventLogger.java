@@ -1,11 +1,11 @@
 package com.splunk.spigot.eventloggers;
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggableDeathEvent;
-import com.splunk.sharedmc.loggable_events.LoggableDeathEvent.DeathEventAction;
-import com.splunk.sharedmc.utilities.Instrument;
-import com.splunk.sharedmc.utilities.LivingLoggerEntity;
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.events.LoggableDeathEvent;
+import com.splunk.sharedmc.logger.events.LoggableDeathEvent.DeathEventAction;
+import com.splunk.sharedmc.logger.entities.LoggableInstrument;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -45,7 +45,7 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
         final Location location = victim.getLocation();
         final World world = victim.getWorld();
 
-        LivingLoggerEntity spVictim;
+        LoggableLivingEntity spVictim;
 
         Point3d victimLocation = new Point3d(location.getX(), location.getY(), location.getZ());
 
@@ -55,17 +55,17 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             // TODO switch this to use the enum.
             deathEvent.setAction("player_death");
 
-            spVictim = new LivingLoggerEntity("player", victim.getName(), victimLocation);
+            spVictim = new LoggableLivingEntity("player", victim.getName(), victimLocation);
 
         } else {
             if (event.getEntityType() == EntityType.SKELETON) {
                 Skeleton skeleton = (org.bukkit.entity.Skeleton) event.getEntity();
 
-                spVictim = new LivingLoggerEntity("creature", skeleton.getSkeletonType() + "_SKELETON", victimLocation);
+                spVictim = new LoggableLivingEntity("creature", skeleton.getSkeletonType() + "_SKELETON", victimLocation);
 
 
             } else {
-                spVictim = new LivingLoggerEntity("creature", victim.getName(), victimLocation);
+                spVictim = new LoggableLivingEntity("creature", victim.getName(), victimLocation);
 
             }
         }
@@ -89,7 +89,7 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             Point3d killerLocation = new Point3d(loc.getX(), loc.getY(), loc.getZ());
 
             org.bukkit.entity.LivingEntity killer = event.getEntity().getKiller();
-            LivingLoggerEntity spKiller = new LivingLoggerEntity("player", killer.getName(), killerLocation);
+            LoggableLivingEntity spKiller = new LoggableLivingEntity("player", killer.getName(), killerLocation);
 
             spKiller.setYaw(event.getEntity().getKiller().getLocation().getYaw());
             spKiller.setPitch(event.getEntity().getKiller().getLocation().getPitch());
@@ -107,7 +107,7 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             // Some items have "_ITEM" appended to the end.
             String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
 
-            Instrument tool = new Instrument(instrumentName);
+            LoggableInstrument tool = new LoggableInstrument(instrumentName);
             for (Enchantment key : instrument.getEnchantments().keySet()) {
 
                 tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
@@ -127,7 +127,7 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
 
                 if (matcher.matches()) {
 
-                    deathEvent.setKiller(new LivingLoggerEntity("creature", matcher.group("killer")));
+                    deathEvent.setKiller(new LoggableLivingEntity("creature", matcher.group("killer")));
                 }
             }
         }
