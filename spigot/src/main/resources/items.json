@@ -162,13 +162,13 @@
     "type": 7
   },
   {
-    "meta": 0,
+    "meta": -1,
     "name": "Flowing Water",
     "material": "flowing_water",
     "type": 8
   },
   {
-    "meta": 0,
+    "meta": -1,
     "name": "Water",
     "material": "stationary_water",
     "type": 9
@@ -962,37 +962,37 @@
     "type": 59
   },
   {
-    "meta": 0,
+    "meta": 4,
     "name": "Wheat Crops",
     "material": "crops",
     "height" : 4,
     "type": 59
   },
   {
-    "meta": 0,
+    "meta": 5,
     "name": "Wheat Crops",
     "material": "crops",
     "height" : 5,
     "type": 59
   },
   {
-    "meta": 0,
+    "meta": 6,
     "name": "Wheat Crops",
     "material": "crops",
     "height" : 6,
     "type": 59
   },
   {
-    "meta": 0,
+    "meta": 7,
     "name": "Wheat Crops",
     "material": "crops",
     "height" : 7,
     "type": 59
   },
   {
-    "meta": 0,
+    "meta": -1,
     "name": "Farmland",
-    "material": "farmland",
+    "material": "soil",
     "type": 60
   },
   {
@@ -4043,7 +4043,7 @@
   },
   {
     "meta": -1,
-    "name": "bed_block",
+    "name": "Bed Block",
     "material": "bed_block",
     "type": 355,
     "cardinal" : "South"
