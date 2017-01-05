@@ -12,12 +12,6 @@
     "type": 1
   },
   {
-    "meta": 0,
-    "name": "Bedrock",
-    "material": "bedrock",
-    "type": 7
-  },
-  {
     "meta": 1,
     "name": "Granite",
     "material": "stone",
@@ -157,8 +151,8 @@
   },
   {
     "meta": 0,
-    "name": "bed_blockrock",
-    "material": "bed_blockrock",
+    "name": "bedrock",
+    "material": "bedrock",
     "type": 7
   },
   {
@@ -403,7 +397,7 @@
   },
   {
     "meta": 0,
-    "name": "bed_block",
+    "name": "Bed",
     "material": "bed_block",
     "type": 26
   },
@@ -452,7 +446,7 @@
   {
     "meta": 0,
     "name": "Dead Bush",
-    "material": "deadbush",
+    "material": "dead_bush",
     "type": 32
   },
   {
@@ -1174,7 +1168,7 @@
     "type": 80
   },
   {
-    "meta": 0,
+    "meta": -1,
     "name": "Cactus",
     "material": "cactus",
     "type": 81
@@ -1188,7 +1182,7 @@
   {
     "meta": -1,
     "name": "Sugar Canes",
-    "material": "reeds",
+    "material": "sugar_cane_block",
     "type": 83
   },
   {
@@ -1204,7 +1198,7 @@
     "type": 85
   },
   {
-    "meta": 0,
+    "meta": -1,
     "name": "Pumpkin",
     "material": "pumpkin",
     "type": 86
