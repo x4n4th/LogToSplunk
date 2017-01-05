@@ -8,6 +8,7 @@ import com.splunk.sharedmc.utilities.LivingLoggerEntity;
 import com.splunk.sharedmc.utilities.Point3d;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
@@ -22,6 +23,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Properties;
+import java.util.logging.Logger;
 
 
 /**
@@ -32,8 +34,11 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
     MCItemCatalogue MCItems = MCItemCatalogue.getInstance();
 
+    Logger log;
+
     public BlockEventLogger(Properties properties) {
         super(properties);
+        log = Bukkit.getLogger();
     }
 
     /**
@@ -43,26 +48,40 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
     @EventHandler
     public void captureBreakEvent(BlockBreakEvent event) {
         // Only log event if it is successful
-        if (!event.isCancelled())
-            logAndSend(getLoggableBlockEvent(BlockEventAction.BREAK, event));
-
+        if (!event.isCancelled()){
+            try{
+                logAndSend(getLoggableBlockEvent(BlockEventAction.BREAK, event));
+            } catch (Exception ex){
+                log.warning(ex.toString());
+            }
+        }
     }
 
     @EventHandler
     public void capturePlaceEvent(BlockPlaceEvent event) {
-        if (!event.isCancelled())
-            logAndSend(getLoggableBlockEvent(BlockEventAction.PLACE, event));
+        if (!event.isCancelled()){
+            try{
+                logAndSend(getLoggableBlockEvent(BlockEventAction.PLACE, event));
+            } catch (Exception ex){
+                log.warning(ex.toString());
+            }
+        }
     }
 
 
     @EventHandler
     public void captureIgniteEvent(BlockIgniteEvent event) {
-        if (!event.isCancelled())
-            logAndSend(getLoggableBlockEvent(BlockEventAction.IGNITE, event));
+        if (!event.isCancelled()){
+            try{
+                logAndSend(getLoggableBlockEvent(BlockEventAction.IGNITE, event));
+            } catch (Exception ex){
+                log.warning(ex.toString());
+            }
+        }
     }
 
 
-    private LoggableBlockEvent getLoggableBlockEvent(BlockEventAction action, BlockEvent event) {
+    private LoggableBlockEvent getLoggableBlockEvent(BlockEventAction action, BlockEvent event) throws Exception{
 
 
         // Pull a couple of objects from the event.

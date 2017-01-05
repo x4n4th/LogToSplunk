@@ -8,6 +8,7 @@ import com.splunk.sharedmc.utilities.Block;
 
 import com.splunk.sharedmc.utilities.Point3d;
 import com.splunk.spigot.utilities.MCItemCatalogue;
+import org.bukkit.Bukkit;
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.World;
 import org.bukkit.event.EventHandler;
@@ -16,13 +17,20 @@ import org.bukkit.event.world.ChunkPopulateEvent;
 import org.bukkit.event.world.WorldEvent;
 
 import java.util.Properties;
+import java.util.logging.Logger;
 
 public class WorldEventLogger extends AbstractEventLogger implements Listener {
-    public WorldEventLogger(Properties properties) {
-        super(properties);
-    }
 
     MCItemCatalogue MCItems = MCItemCatalogue.getInstance();
+
+    Logger log;
+
+    public WorldEventLogger(Properties properties) {
+        super(properties);
+
+        log = Bukkit.getLogger();
+    }
+
 
     @EventHandler
     public void capturePopulateChunkEvent(ChunkPopulateEvent event) {
@@ -40,15 +48,18 @@ public class WorldEventLogger extends AbstractEventLogger implements Listener {
 
                 Point3d boxLocation = new Point3d(mcBlock.getX(), mcBlock.getY(), mcBlock.getZ());
 
-                Block b = new Block(mcBlock.getType().toString(), MCItems.getBlockName(mcBlock), boxLocation);
-                b.setBiome(new Biome(biomeName));
+                try{
+                    Block b = new Block(mcBlock.getType().toString(), MCItems.getBlockName(mcBlock), boxLocation);
+                    b.setBiome(new Biome(biomeName));
 
-                LoggableWorldEvent loggableEvent = getLoggablePlayerEvent(LoggableWorldEvent.WorldEventAction.CHUNK_POPULATE, event);
+                    LoggableWorldEvent loggableEvent = getLoggablePlayerEvent(LoggableWorldEvent.WorldEventAction.CHUNK_POPULATE, event);
 
-                loggableEvent.setBlock(b);
+                    loggableEvent.setBlock(b);
 
-                logAndSend(loggableEvent);
-
+                    logAndSend(loggableEvent);
+                } catch (Exception ex){
+                    log.warning(ex.toString());
+                }
             }
         }
 

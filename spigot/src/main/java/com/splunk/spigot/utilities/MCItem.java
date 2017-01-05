@@ -4,13 +4,13 @@ public class MCItem {
 
     private int meta;
     private String name;
-    private String text_type;
+    private String material;
     private int type;
 
-    public MCItem(int meta, String name, String text_type, int type) {
+    public MCItem(int meta, String name, String material, int type) {
         this.meta = meta;
         this.name = name;
-        this.text_type = text_type;
+        this.material = material;
         this.type = type;
     }
 
@@ -30,12 +30,12 @@ public class MCItem {
         this.name = name;
     }
 
-    public String getText_type() {
-        return text_type;
+    public String getMaterial() {
+        return material;
     }
 
-    public void setText_type(String text_type) {
-        this.text_type = text_type;
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     public int getType() {
@@ -46,24 +46,4 @@ public class MCItem {
         this.type = type;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        MCItem mcItem = (MCItem) o;
-
-        if (meta != mcItem.meta) return false;
-        if (type != mcItem.type) return false;
-        return text_type.equals(mcItem.text_type);
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = meta;
-        result = 31 * result + text_type.hashCode();
-        result = 31 * result + type;
-        return result;
-    }
 }
