@@ -45,7 +45,7 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
 
     private LoggableDeathEvent getLoggableDeathEvent(DeathEventAction action, EntityDeathEvent event) {
 
-        final org.bukkit.entity.LivingEntity victim = event.getEntity();
+        final LivingEntity victim = event.getEntity();
         final Location location = victim.getLocation();
         final World world = victim.getWorld();
 
@@ -73,12 +73,16 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
             if (event instanceof PlayerDeathEvent) {
                 // Only works if a player dies.
 
+                String deathMessage = ((PlayerDeathEvent) event).getDeathMessage();
+
+
                 Pattern regex = Pattern.compile("\\S* (was slain by|was shot by a|was blown up by) (?<killer>\\S*)");
-                Matcher matcher = regex.matcher(((PlayerDeathEvent) event).getDeathMessage());
+                Matcher matcher = regex.matcher(deathMessage);
 
                 if (matcher.matches()) {
-
                     deathEvent.setKiller(new LoggableLivingEntity("creature", matcher.group("killer")));
+                } else {
+                    deathEvent.setKiller(new LoggableLivingEntity("world", deathMessage.replace(victim.getName(), "").trim()));
                 }
             }
         }

@@ -51,6 +51,8 @@ public enum EntityUtil {;
             } else {
                 spCreature.setName(entity.getType().name());
             }
+
+            return spCreature;
         } else if(entity instanceof Item){
             return new LoggableItemEntity("item", entity.getName(), location);
         }

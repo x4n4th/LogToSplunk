@@ -10,6 +10,7 @@ public class LoggableLivingEntity extends LoggableEntity {
     private List potions;
     private double currentHealth;
     private double maxHealth;
+
     private double yaw;
     private double pitch;
 
@@ -22,16 +23,10 @@ public class LoggableLivingEntity extends LoggableEntity {
 
     public LoggableLivingEntity(String type, String name) {
         super(type, name.replaceAll("§\\S", "")); // Remove the formatting codes;
-
-        this.potions = new ArrayList();
-
-
     }
 
     public LoggableLivingEntity(String type, String name, Point3d location) {
         super(type, name.replaceAll("§\\S", ""), location);
-
-        this.potions = new ArrayList();
     }
 
     public LoggableLivingEntity() {
@@ -62,6 +57,10 @@ public class LoggableLivingEntity extends LoggableEntity {
     }
 
     public void addPotions(String item) {
+        if(potions == null){
+            this.potions = new ArrayList();
+        }
+
         potions.add(item);
     }
 
