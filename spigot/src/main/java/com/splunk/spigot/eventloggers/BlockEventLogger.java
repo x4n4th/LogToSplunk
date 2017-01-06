@@ -7,13 +7,16 @@ import com.splunk.sharedmc.logger.events.LoggableBlockEvent;
 import com.splunk.sharedmc.logger.entities.LoggableInstrument;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
+import com.splunk.spigot.utilities.EntityUtil;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Instrument;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -101,41 +104,17 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
             Player player = ((BlockBreakEvent) event).getPlayer();
 
-            LoggableLivingEntity spEntity = new LoggableLivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
-            spEntity.setCurrentHealth(player.getHealth());
-            spEntity.setMaxHealth(player.getMaxHealth());
-            spEntity.setPitch(player.getLocation().getPitch());
-            spEntity.setYaw(player.getLocation().getPitch());
+            blockEvent.setPlayer((LoggableLivingEntity) EntityUtil.getLoggableEntity(player));
 
-            blockEvent.setPlayer(spEntity);
+            LoggableInstrument instrument = EntityUtil.getInstrument(player);
 
-            ItemStack instrument = ((BlockBreakEvent) event).getPlayer().getInventory().getItemInMainHand();
-
-            // Some items have "_ITEM" appended to the end.
-            String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
-
-            LoggableInstrument tool = new LoggableInstrument(instrumentName);
-            for (Enchantment key : instrument.getEnchantments().keySet()) {
-
-                tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
-            }
-
-            if(instrument.getItemMeta() != null){
-                tool.setName(instrument.getItemMeta().getDisplayName());
-            }
-
-            blockEvent.setTool(tool);
+            blockEvent.setTool(instrument);
 
 
         } else if (event instanceof BlockPlaceEvent) {
             Player player = ((BlockPlaceEvent) event).getPlayer();
 
-            LoggableLivingEntity spEntity = new LoggableLivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
-            spEntity.setCurrentHealth(player.getHealth());
-            spEntity.setMaxHealth(player.getMaxHealth());
-            spEntity.setPitch(location.getPitch());
-            spEntity.setYaw(location.getYaw());
-            blockEvent.setPlayer(spEntity);
+            blockEvent.setPlayer((LoggableLivingEntity) EntityUtil.getLoggableEntity(player));
         } else if (event instanceof BlockIgniteEvent) {
 
 

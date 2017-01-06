@@ -1,8 +1,7 @@
 package com.splunk.sharedmc.logger.actions;
 
 public enum DeathEventAction {
-    CREATURE("creature_death"),
-    PLAYER("player_death");
+    DEATH("death");
 
     private final String action;
 

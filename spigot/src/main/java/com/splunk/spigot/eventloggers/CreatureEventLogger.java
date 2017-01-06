@@ -6,6 +6,7 @@ import com.splunk.sharedmc.logger.events.LoggableCreatureEvent;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
 
+import com.splunk.spigot.utilities.EntityUtil;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
@@ -34,30 +35,12 @@ public class CreatureEventLogger extends AbstractEventLogger implements Listener
 
     private LoggableCreatureEvent getLoggableEntityEvent(CreatureEventAction action, EntityEvent event) {
 
-        final Entity entity = event.getEntity();
-        final Location location = entity.getLocation();
+        final Entity entity = event.getEntity();;
         final World world = entity.getWorld();
-
-        Point3d coordinates = new Point3d(location.getX(), location.getY(), location.getZ());
 
         LoggableCreatureEvent entityEvent = new LoggableCreatureEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
-        LoggableLivingEntity spCreature = new LoggableLivingEntity();
-        spCreature.setType("creature");
-        spCreature.setCurrentHealth(((org.bukkit.entity.LivingEntity)entity).getHealth());
-        spCreature.setMaxHealth(((org.bukkit.entity.LivingEntity)entity).getMaxHealth());
-        spCreature.setLocation(coordinates);
-
-        for (PotionEffect potion : (((org.bukkit.entity.LivingEntity)entity).getActivePotionEffects())) {
-            spCreature.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());
-        }
-
-        if (event.getEntityType() == EntityType.SKELETON) {
-            Skeleton skeleton = (org.bukkit.entity.Skeleton) event.getEntity();
-            spCreature.setName(skeleton.getSkeletonType() + "_SKELETON");
-        } else {
-            spCreature.setName(event.getEntityType().name());
-        }
+        LoggableLivingEntity spCreature = (LoggableLivingEntity)EntityUtil.getLoggableEntity(entity);
 
         entityEvent.setEntity(spCreature);
         return entityEvent;

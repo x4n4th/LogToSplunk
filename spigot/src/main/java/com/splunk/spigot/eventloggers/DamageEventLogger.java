@@ -5,6 +5,7 @@ import com.splunk.sharedmc.logger.entities.*;
 import com.splunk.sharedmc.logger.AbstractEventLogger;
 import com.splunk.sharedmc.logger.events.LoggableDamageEvent;
 import com.splunk.sharedmc.logger.utilities.Point3d;
+import com.splunk.spigot.utilities.EntityUtil;
 import org.bukkit.World;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
@@ -55,7 +56,7 @@ public class DamageEventLogger extends AbstractEventLogger implements Listener {
         double damageFinal = event.getFinalDamage();
         String cause = event.getCause().name();
 
-        victim = getLivingEntity(entity);
+        victim = EntityUtil.getLoggableEntity(entity);
 
         loggableEvent.setVictim(victim);
 
@@ -70,12 +71,12 @@ public class DamageEventLogger extends AbstractEventLogger implements Listener {
             }
 
             if(attacker instanceof Player){
-                tool = getInstrument((Player)attacker);
+                tool = EntityUtil.getInstrument((Player)attacker);
 
                 loggableEvent.setTool(tool);
             }
 
-            assailant = getLivingEntity(attacker);
+            assailant = EntityUtil.getLoggableEntity(attacker);
 
             loggableEvent.setAttacker(assailant);
 
@@ -86,71 +87,5 @@ public class DamageEventLogger extends AbstractEventLogger implements Listener {
         loggableEvent.setCause(cause);
 
         return loggableEvent;
-    }
-
-    private LoggableEntity getLivingEntity(Entity entity){
-
-        LoggableEntity livingEntity;
-
-        Point3d location = new Point3d(entity.getLocation().getX(), entity.getLocation().getY(), entity.getLocation().getZ());
-
-        if (entity instanceof Player) {
-
-            livingEntity = new LoggableLivingEntity("player", entity.getName(), location);
-
-            for (PotionEffect potion : ((Player) entity).getActivePotionEffects()) {
-                ((LoggableLivingEntity)livingEntity).addPotions(potion.getType().getName() + ":" + potion.getAmplifier() );
-            }
-
-            ((LoggableLivingEntity)livingEntity).setCurrentHealth(((Player) entity).getHealth());
-
-            ((LoggableLivingEntity)livingEntity).setMaxHealth(((Player)entity).getMaxHealth());
-            ((LoggableLivingEntity)livingEntity).setYaw(entity.getLocation().getYaw());
-            ((LoggableLivingEntity)livingEntity).setPitch(entity.getLocation().getPitch());
-
-        }else if (entity instanceof Item) {
-
-            livingEntity = new LoggableItemEntity("item", entity.getName(), location);
-
-
-        } else {
-            if (entity.getType() == EntityType.SKELETON) {
-                Skeleton skeleton = (org.bukkit.entity.Skeleton) entity;
-
-                livingEntity = new LoggableLivingEntity("creature", skeleton.getSkeletonType() + "_SKELETON", location);
-
-
-            } else {
-                livingEntity = new LoggableLivingEntity("creature", entity.getName(), location);
-
-            }
-
-            ((LoggableLivingEntity)livingEntity).setYaw(entity.getLocation().getYaw());
-            ((LoggableLivingEntity)livingEntity).setPitch(entity.getLocation().getPitch());
-        }
-
-
-
-
-        return livingEntity;
-    }
-
-    private LoggableInstrument getInstrument(Player p){
-        ItemStack instrument = p.getInventory().getItemInMainHand();
-
-        // Some items have "_ITEM" appended to the end.
-        String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
-
-        LoggableInstrument tool = new LoggableInstrument(instrumentName);
-        for (Enchantment key : instrument.getEnchantments().keySet()) {
-
-            tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
-        }
-
-        if(instrument.getItemMeta() != null){
-            tool.setName(instrument.getItemMeta().getDisplayName());
-        }
-
-        return tool;
     }
 }

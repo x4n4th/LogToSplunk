@@ -7,11 +7,11 @@ import com.splunk.sharedmc.logger.entities.LoggableInstrument;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
 
+import com.splunk.spigot.utilities.EntityUtil;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -32,8 +32,15 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
     @EventHandler
     public void captureDeathEvent(EntityDeathEvent event) {
 
-        // Default to creature death. Will override if actual player death.
-        logAndSend(getLoggableDeathEvent(DeathEventAction.CREATURE, event));
+        LoggableDeathEvent deathEvent = getLoggableDeathEvent(DeathEventAction.DEATH, event);
+
+        if(event instanceof PlayerDeathEvent){
+            deathEvent.setCategory("player");
+        } else {
+            deathEvent.setCategory("creature");
+        }
+
+        logAndSend(deathEvent);
     }
 
     private LoggableDeathEvent getLoggableDeathEvent(DeathEventAction action, EntityDeathEvent event) {
@@ -42,77 +49,24 @@ public class DeathEventLogger extends AbstractEventLogger implements Listener {
         final Location location = victim.getLocation();
         final World world = victim.getWorld();
 
-        LoggableLivingEntity spVictim;
-
-        Point3d victimLocation = new Point3d(location.getX(), location.getY(), location.getZ());
-
         LoggableDeathEvent deathEvent = new LoggableDeathEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
-        if (event instanceof PlayerDeathEvent) {
-            // TODO switch this to use the enum.
-            deathEvent.setAction("player_death");
-
-            spVictim = new LoggableLivingEntity("player", victim.getName(), victimLocation);
-
-        } else {
-            if (event.getEntityType() == EntityType.SKELETON) {
-                Skeleton skeleton = (org.bukkit.entity.Skeleton) event.getEntity();
-
-                spVictim = new LoggableLivingEntity("creature", skeleton.getSkeletonType() + "_SKELETON", victimLocation);
-
-
-            } else {
-                spVictim = new LoggableLivingEntity("creature", victim.getName(), victimLocation);
-
-            }
-        }
-
-        spVictim.setYaw(location.getYaw());
-        spVictim.setPitch(location.getPitch());
-
-        for (PotionEffect potion : event.getEntity().getActivePotionEffects()) {
-            spVictim.addPotions(potion.getType().getName() + ":" + potion.getAmplifier() );
-        }
-
-        spVictim.setCurrentHealth(victim.getHealth());
-        spVictim.setMaxHealth(victim.getMaxHealth());
+        LoggableLivingEntity spVictim = (LoggableLivingEntity)EntityUtil.getLoggableEntity(victim);
 
         deathEvent.setVictim(spVictim);
 
-        if (event.getEntity().getKiller() != null) {
+        Entity killer = event.getEntity().getKiller();
 
-            Location loc = event.getEntity().getKiller().getLocation();
+        if (killer != null) {
 
-            Point3d killerLocation = new Point3d(loc.getX(), loc.getY(), loc.getZ());
-
-            org.bukkit.entity.LivingEntity killer = event.getEntity().getKiller();
-            LoggableLivingEntity spKiller = new LoggableLivingEntity("player", killer.getName(), killerLocation);
-
-            spKiller.setYaw(event.getEntity().getKiller().getLocation().getYaw());
-            spKiller.setPitch(event.getEntity().getKiller().getLocation().getPitch());
-
-            for (PotionEffect potion : killer.getActivePotionEffects()) {
-                spKiller.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());
-            }
-
-            spKiller.setCurrentHealth(killer.getHealth());
-            spKiller.setMaxHealth(killer.getMaxHealth());
+            LoggableLivingEntity spKiller = (LoggableLivingEntity)EntityUtil.getLoggableEntity(killer);
             deathEvent.setKiller(spKiller);
 
-            ItemStack instrument = event.getEntity().getKiller().getInventory().getItemInMainHand();
 
-            // Some items have "_ITEM" appended to the end.
-            String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
+            LoggableInstrument instrument = EntityUtil.getInstrument((Player)killer);
 
-            LoggableInstrument tool = new LoggableInstrument(instrumentName);
-            for (Enchantment key : instrument.getEnchantments().keySet()) {
 
-                tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
-            }
-
-            tool.setName(instrument.getItemMeta().getDisplayName());
-
-            deathEvent.setWeapon(tool);
+            deathEvent.setWeapon(instrument);
 
         } else {
             // Creature did killing and we have to get killer from death message

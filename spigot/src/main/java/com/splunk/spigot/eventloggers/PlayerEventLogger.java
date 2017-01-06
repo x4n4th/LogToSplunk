@@ -7,8 +7,10 @@ import com.splunk.sharedmc.logger.events.LoggablePlayerEvent;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
 
+import com.splunk.spigot.utilities.EntityUtil;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -66,25 +68,15 @@ public class PlayerEventLogger extends AbstractEventLogger implements Listener {
 
         LoggablePlayerEvent playerEvent = new LoggablePlayerEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
-        LoggableLivingEntity eventPlayer = new LoggableLivingEntity("player", player.getDisplayName());
+        LoggableLivingEntity eventPlayer = (LoggableLivingEntity)EntityUtil.getLoggableEntity(player);
 
-        eventPlayer.setMaxHealth(player.getMaxHealth());
-        eventPlayer.setCurrentHealth(player.getHealth());
-
-        eventPlayer.setYaw(location.getYaw());
-        eventPlayer.setPitch(location.getPitch());
-
-
-        for (PotionEffect potion : player.getActivePotionEffects()) {
-            eventPlayer.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());
-        }
         playerEvent.setPlayer(eventPlayer);
 
         if (event instanceof PlayerMoveEvent) {
 
             // Teleport is a child class so this is to allow us to identify the child class
             if (event instanceof PlayerTeleportEvent)
-                playerEvent.setAction("Teleport"); // Should use the action enum instead of the string.
+                playerEvent.setAction("teleport"); // Should use the action enum instead of the string.
 
             // The coordinates from the event and the destination of the move event are slightly different so this corrects that.
             Point3d destination = new Point3d(((PlayerMoveEvent) event).getTo().getX(), ((PlayerMoveEvent) event).getTo().getY(), ((PlayerMoveEvent) event).getTo().getZ());
