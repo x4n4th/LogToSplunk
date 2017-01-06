@@ -36,9 +36,9 @@ public class LogToSplunkPlugin extends JavaPlugin implements Listener {
             properties.load(reader);
         } catch (final Exception e) {
             logger.warn(
-                    String.format(
-                            "Unable to load properties for LogToSplunkMod at %s! Default values will be used.", path),
-                    e);
+                String.format(
+                        "Unable to load properties for LogToSplunkMod at %s! Default values will be used.", path),
+                e);
         }
 
 

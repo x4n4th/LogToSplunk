@@ -1,7 +1,5 @@
 package com.splunk.sharedmc.logger;
 
-import com.splunk.sharedmc.logger.connection.SingleSplunkConnection;
-
 import com.splunk.sharedmc.logger.events.LoggableEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
