@@ -1,6 +1,7 @@
 package com.splunk.sharedmc.logger.events;
 
 
+import com.splunk.sharedmc.logger.actions.PlayerEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
 
@@ -11,7 +12,7 @@ public class LoggablePlayerEvent extends AbstractLoggableEvent {
     private Point3d src;
     private Point3d dest;
 
-    public LoggablePlayerEvent(long gameTime, String minecraft_server, String world, LoggablePlayerEvent.PlayerEventAction action) {
+    public LoggablePlayerEvent(long gameTime, String minecraft_server, String world, PlayerEventAction action) {
         super(gameTime, minecraft_server, world, "player", action.asString());
     }
 
@@ -39,31 +40,4 @@ public class LoggablePlayerEvent extends AbstractLoggableEvent {
         this.src = src;
     }
 
-    /**
-     * Different types of actions that can occur as part of a PlayerEvent.
-     */
-    public enum PlayerEventAction {
-        PLAYER_LOGIN("login"),
-        PLAYER_LOGOUT("logout"),
-        MOVE("move"),
-        TELEPORT("teleport");
-
-        /**
-         * The name of the action.
-         */
-        private final String action;
-
-        PlayerEventAction(String action) {
-            this.action = action;
-        }
-
-        /**
-         * String representation of the action.
-         *
-         * @return The action in friendly String format.
-         */
-        public String asString() {
-            return action;
-        }
-    }
 }

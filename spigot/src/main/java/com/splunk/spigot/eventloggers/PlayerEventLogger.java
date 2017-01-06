@@ -2,8 +2,8 @@ package com.splunk.spigot.eventloggers;
 
 
 import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.PlayerEventAction;
 import com.splunk.sharedmc.logger.events.LoggablePlayerEvent;
-import com.splunk.sharedmc.logger.events.LoggablePlayerEvent.PlayerEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
 

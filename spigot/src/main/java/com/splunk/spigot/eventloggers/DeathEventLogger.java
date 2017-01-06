@@ -1,8 +1,8 @@
 package com.splunk.spigot.eventloggers;
 
 import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.DeathEventAction;
 import com.splunk.sharedmc.logger.events.LoggableDeathEvent;
-import com.splunk.sharedmc.logger.events.LoggableDeathEvent.DeathEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableInstrument;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
@@ -23,9 +23,6 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by powerschill on 7/25/16.
- */
 public class DeathEventLogger extends AbstractEventLogger implements Listener {
 
     public DeathEventLogger(Properties properties) {

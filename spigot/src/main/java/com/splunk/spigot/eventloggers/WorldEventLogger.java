@@ -2,6 +2,7 @@ package com.splunk.spigot.eventloggers;
 
 
 import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.WorldEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableBlock;
 import com.splunk.sharedmc.logger.events.LoggableWorldEvent;
 import com.splunk.sharedmc.logger.entities.LoggableBiome;
@@ -52,7 +53,7 @@ public class WorldEventLogger extends AbstractEventLogger implements Listener {
                     LoggableBlock b = new LoggableBlock(mcBlock.getType().toString(), MCItems.getBlockName(mcBlock), boxLocation);
                     b.setBiome(new LoggableBiome(biomeName));
 
-                    LoggableWorldEvent loggableEvent = getLoggablePlayerEvent(LoggableWorldEvent.WorldEventAction.CHUNK_POPULATE, event);
+                    LoggableWorldEvent loggableEvent = getLoggablePlayerEvent(WorldEventAction.CHUNK_POPULATE, event);
 
                     loggableEvent.setBlock(b);
 
@@ -65,7 +66,7 @@ public class WorldEventLogger extends AbstractEventLogger implements Listener {
 
     }
 
-    private LoggableWorldEvent getLoggablePlayerEvent(LoggableWorldEvent.WorldEventAction action, WorldEvent event) {
+    private LoggableWorldEvent getLoggablePlayerEvent(WorldEventAction action, WorldEvent event) {
 
         final World world = event.getWorld();
 

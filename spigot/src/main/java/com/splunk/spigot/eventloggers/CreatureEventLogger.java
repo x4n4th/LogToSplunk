@@ -1,8 +1,8 @@
 package com.splunk.spigot.eventloggers;
 
 import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.CreatureEventAction;
 import com.splunk.sharedmc.logger.events.LoggableCreatureEvent;
-import com.splunk.sharedmc.logger.events.LoggableCreatureEvent.EntityEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;
 
@@ -29,10 +29,10 @@ public class CreatureEventLogger extends AbstractEventLogger implements Listener
     @EventHandler
     public void captureSpawnEvent(CreatureSpawnEvent event) {
         if (!event.isCancelled())
-            logAndSend(getLoggableEntityEvent(EntityEventAction.SPAWN, event));
+            logAndSend(getLoggableEntityEvent(CreatureEventAction.SPAWN, event));
     }
 
-    private LoggableCreatureEvent getLoggableEntityEvent(EntityEventAction action, EntityEvent event) {
+    private LoggableCreatureEvent getLoggableEntityEvent(CreatureEventAction action, EntityEvent event) {
 
         final Entity entity = event.getEntity();
         final Location location = entity.getLocation();

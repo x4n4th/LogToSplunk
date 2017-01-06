@@ -1,5 +1,6 @@
 package com.splunk.spigot.eventloggers;
 
+import com.splunk.sharedmc.logger.actions.EntityDamageEventAction;
 import com.splunk.sharedmc.logger.entities.*;
 import com.splunk.sharedmc.logger.AbstractEventLogger;
 import com.splunk.sharedmc.logger.events.LoggableDamageEvent;
@@ -27,10 +28,10 @@ public class DamageEventLogger extends AbstractEventLogger implements Listener {
     @EventHandler
     public void captureDamageEvent(EntityDamageEvent event) {
         if (!event.isCancelled())
-            logAndSend(getLoggableEntityEvent(LoggableDamageEvent.EntityDamageEventAction.DAMAGE, event));
+            logAndSend(getLoggableEntityEvent(EntityDamageEventAction.DAMAGE, event));
     }
 
-    private LoggableDamageEvent getLoggableEntityEvent(LoggableDamageEvent.EntityDamageEventAction action, EntityDamageEvent event) {
+    private LoggableDamageEvent getLoggableEntityEvent(EntityDamageEventAction action, EntityDamageEvent event) {
 
         LoggableEntity victim;
         LoggableInstrument tool;

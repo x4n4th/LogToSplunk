@@ -1,5 +1,6 @@
 package com.splunk.sharedmc.logger.events;
 
+import com.splunk.sharedmc.logger.actions.EntityDamageEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableInstrument;
 import com.splunk.sharedmc.logger.entities.LoggableEntity;
 
@@ -39,19 +40,5 @@ public class LoggableDamageEvent extends AbstractLoggableEvent {
 
     public void setCause(String cause) {
         this.cause = cause;
-    }
-
-    public enum EntityDamageEventAction {
-        DAMAGE("damage");
-
-        private final String action;
-
-        EntityDamageEventAction(String action) {
-            this.action = action;
-        }
-
-        public String asString() {
-            return action;
-        }
     }
 }

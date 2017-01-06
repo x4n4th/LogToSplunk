@@ -1,9 +1,9 @@
 package com.splunk.spigot.eventloggers;
 
 import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.BlockEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableBlock;
 import com.splunk.sharedmc.logger.events.LoggableBlockEvent;
-import com.splunk.sharedmc.logger.events.LoggableBlockEvent.BlockEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableInstrument;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 import com.splunk.sharedmc.logger.utilities.Point3d;

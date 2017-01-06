@@ -1,5 +1,6 @@
 package com.splunk.sharedmc.logger.events;
 
+import com.splunk.sharedmc.logger.actions.DeathEventAction;
 import com.splunk.sharedmc.logger.entities.LoggableInstrument;
 import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
 
@@ -46,19 +47,4 @@ public class LoggableDeathEvent extends AbstractLoggableEvent {
         this.cause = cause;
     }
 
-
-    public enum DeathEventAction {
-        CREATURE("creature_death"),
-        PLAYER("player_death");
-
-        private final String action;
-
-        DeathEventAction(String action) {
-            this.action = action;
-        }
-
-        public String asString() {
-            return action;
-        }
-    }
 }
