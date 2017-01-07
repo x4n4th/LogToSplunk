@@ -1,14 +1,15 @@
 package com.splunk.spigot.utilities;
 
 import com.google.gson.Gson;
+import com.splunk.spigot.LogToSplunkPlugin;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static org.bukkit.Bukkit.*;
 
@@ -17,12 +18,11 @@ public class MCItemCatalogue implements Iterable<MCItem> {
     private static MCItemCatalogue instance = null;
     private Map<String, MCItem> mcItems = new HashMap<>();
 
-    public Logger log;
+    private final Logger logger = LogManager.getLogger(LogToSplunkPlugin.class.getName());
 
     public static MCItemCatalogue getInstance() {
         if (instance == null) {
             instance = new MCItemCatalogue();
-            instance.log = Bukkit.getLogger();
         }
 
         return instance;
@@ -44,7 +44,7 @@ public class MCItemCatalogue implements Iterable<MCItem> {
         MCItem mcItems[] = gson.fromJson(contents, MCItem[].class);
 
 
-        log.info("Loaded " + mcItems.length + " items");
+        logger.info("[LogToSplunk] Loaded " + mcItems.length + " items");
 
         for (MCItem item : mcItems) {
             String key = item.getMaterial().toLowerCase() + item.getMeta();
@@ -74,7 +74,7 @@ public class MCItemCatalogue implements Iterable<MCItem> {
             return item.getName();
         }
 
-        log.warning("Could not find LoggableBlock in items.json " +
+        logger.warn("Could not find LoggableBlock in items.json " +
                 "\nLoggableBlock: " + material.toString().toLowerCase() +
                 "\nMeta: " + meta);
 
