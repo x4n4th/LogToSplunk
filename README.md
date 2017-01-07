@@ -1,7 +1,7 @@
 # LogToSplunk
 Event logging plugin for Spigot with support for Splunk HTTP Event Collector.
 
-[![GitHub issues](https://img.shields.io/github/issues/x4n4th/LogToSplunk.svg)](https://github.com/x4n4th/LogToSplunk/issues) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/x4n4th/LogToSplunk/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/x4n4th/LogToSplunk.svg)](https://github.com/x4n4th/LogToSplunk/issues) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/x4n4th/LogToSplunk/master/LICENSE) [![GitHub issues](https://api.travis-ci.org/x4n4th/LogToSplunk.svg)](https://travis-ci.org/x4n4th/LogToSplunk)
 
 ## Getting Started
 
