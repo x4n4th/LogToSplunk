@@ -16,7 +16,9 @@ Event logging plugin for Spigot with support for Splunk HTTP Event Collector.
 3. Place the LogToSplunk.jar file within the plugins directory of your Spigot Minecraft server. 
 4. Start the Minecraft server to generate the ./plugins/LogToSplunk directory, configuration file, and items file.
 5. Stop the Minecraft server.
-6. Edit the LogToSplunk.properties configuration file.
+6. Edit the LogToSplunk.properties configuration file. 
+
+> Read the comments in the configuration file. You must set splunk.craft.plugin.configured=true for the plugin to load
 
 ## Known Issues
 
