@@ -1,4 +1,4 @@
-package com.splunk.sharedmc;
+package com.splunk.sharedmc.logger;
 
 /**
  * Has a way of connecting to Splunk and sends information to it.

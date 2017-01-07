@@ -1,18 +1,22 @@
 package com.splunk.spigot.eventloggers;
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggableBlockEvent;
-import com.splunk.sharedmc.loggable_events.LoggableBlockEvent.BlockEventAction;
-import com.splunk.sharedmc.utilities.Instrument;
-import com.splunk.sharedmc.utilities.LivingEntity;
-import com.splunk.sharedmc.utilities.Point3d;
-import com.splunk.spigot.utilities.MCItem;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.BlockEventAction;
+import com.splunk.sharedmc.logger.entities.LoggableBlock;
+import com.splunk.sharedmc.logger.events.LoggableBlockEvent;
+import com.splunk.sharedmc.logger.entities.LoggableInstrument;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
+import com.splunk.spigot.utilities.EntityUtil;
 import com.splunk.spigot.utilities.MCItemCatalogue;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Instrument;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -23,6 +27,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Properties;
+import java.util.logging.Logger;
 
 
 /**
@@ -33,8 +38,11 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
     MCItemCatalogue MCItems = MCItemCatalogue.getInstance();
 
+    Logger log;
+
     public BlockEventLogger(Properties properties) {
         super(properties);
+        log = Bukkit.getLogger();
     }
 
     /**
@@ -44,26 +52,40 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
     @EventHandler
     public void captureBreakEvent(BlockBreakEvent event) {
         // Only log event if it is successful
-        if (!event.isCancelled())
-            logAndSend(getLoggableBlockEvent(BlockEventAction.BREAK, event));
-
+        if (!event.isCancelled()){
+            try{
+                logAndSend(getLoggableBlockEvent(BlockEventAction.BREAK, event));
+            } catch (Exception ex){
+                log.warning(ex.toString());
+            }
+        }
     }
 
     @EventHandler
     public void capturePlaceEvent(BlockPlaceEvent event) {
-        if (!event.isCancelled())
-            logAndSend(getLoggableBlockEvent(BlockEventAction.PLACE, event));
+        if (!event.isCancelled()){
+            try{
+                logAndSend(getLoggableBlockEvent(BlockEventAction.PLACE, event));
+            } catch (Exception ex){
+                log.warning(ex.toString());
+            }
+        }
     }
 
 
     @EventHandler
     public void captureIgniteEvent(BlockIgniteEvent event) {
-        if (!event.isCancelled())
-            logAndSend(getLoggableBlockEvent(BlockEventAction.IGNITE, event));
+        if (!event.isCancelled()){
+            try{
+                logAndSend(getLoggableBlockEvent(BlockEventAction.IGNITE, event));
+            } catch (Exception ex){
+                log.warning(ex.toString());
+            }
+        }
     }
 
 
-    private LoggableBlockEvent getLoggableBlockEvent(BlockEventAction action, BlockEvent event) {
+    private LoggableBlockEvent getLoggableBlockEvent(BlockEventAction action, BlockEvent event) throws Exception{
 
 
         // Pull a couple of objects from the event.
@@ -75,37 +97,24 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
         LoggableBlockEvent blockEvent = new LoggableBlockEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
         Point3d boxLocation = new Point3d(location.getX(), location.getY(), location.getZ());
-        blockEvent.setBlock(new com.splunk.sharedmc.utilities.Block(block.getType().toString(), getBlockName(block), boxLocation));
+        blockEvent.setBlock(new LoggableBlock(block.getType().toString(), MCItems.getBlockName(block), boxLocation));
 
 
         if (event instanceof BlockBreakEvent) {
 
             Player player = ((BlockBreakEvent) event).getPlayer();
 
-            LivingEntity spEntity = new LivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
-            spEntity.setCurrentHealth(player.getHealth());
-            spEntity.setMaxHealth(player.getMaxHealth());
-            blockEvent.setPlayer(spEntity);
+            blockEvent.setPlayer((LoggableLivingEntity) EntityUtil.getLoggableEntity(player));
 
+            LoggableInstrument instrument = EntityUtil.getInstrument(player);
 
-            ItemStack instrument = ((BlockBreakEvent) event).getPlayer().getInventory().getItemInMainHand();
-            Instrument tool = new Instrument(instrument.getType().toString());
-            for (Enchantment key : instrument.getEnchantments().keySet()) {
-
-                tool.addEnchantment(key.getName().toString() + ":" + instrument.getEnchantments().get(key));
-            }
-
-
-            blockEvent.setTool(tool);
+            blockEvent.setTool(instrument);
 
 
         } else if (event instanceof BlockPlaceEvent) {
             Player player = ((BlockPlaceEvent) event).getPlayer();
 
-            LivingEntity spEntity = new LivingEntity("player", player.getDisplayName(), new Point3d(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
-            spEntity.setCurrentHealth(player.getHealth());
-            spEntity.setMaxHealth(player.getMaxHealth());
-            blockEvent.setPlayer(spEntity);
+            blockEvent.setPlayer((LoggableLivingEntity) EntityUtil.getLoggableEntity(player));
         } else if (event instanceof BlockIgniteEvent) {
 
 
@@ -136,31 +145,6 @@ public class BlockEventLogger extends AbstractEventLogger implements Listener {
 
 
         return blockEvent;
-    }
-
-    public String getBlockName(Block block) {
-
-        String blockName = "UNKNOWN";
-
-        for (MCItem item : MCItems.getMCItems()) {
-
-
-            // First match type <--> MATERIAL
-            if (item.getText_type().equals(block.getType().toString())) {
-
-                // Default to base block for types where durability means something else like direction facing.
-                blockName = item.getText_type();
-
-                // Next match on meta number
-                if (item.getMeta() == block.getState().getData().toItemStack().getDurability()) {
-                    blockName = item.getName();
-                    return blockName;
-                }
-            }
-
-
-        }
-        return blockName;
     }
 
 }

@@ -10,7 +10,6 @@
     <modules>
         <module>spigot</module>
         <module>shared-mc</module>
-        <module>logtosplunk</module>
     </modules>
     <packaging>pom</packaging>
     <repositories>

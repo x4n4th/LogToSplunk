@@ -1,0 +1,4867 @@
+[
+  {
+    "meta": 0,
+    "name": "Air",
+    "material": "air",
+    "type": 0
+  },
+  {
+    "meta": 0,
+    "name": "Stone",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 1,
+    "name": "Granite",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 2,
+    "name": "Polished Granite",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 3,
+    "name": "Diorite",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 4,
+    "name": "Polished Diorite",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 5,
+    "name": "Andesite",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 6,
+    "name": "Polished Andesite",
+    "material": "stone",
+    "type": 1
+  },
+  {
+    "meta": 0,
+    "name": "Grass",
+    "material": "grass",
+    "type": 2
+  },
+  {
+    "meta": 0,
+    "name": "Dirt",
+    "material": "dirt",
+    "type": 3
+  },
+  {
+    "meta": 1,
+    "name": "Coarse Dirt",
+    "material": "dirt",
+    "type": 3
+  },
+  {
+    "meta": 2,
+    "name": "Podzol",
+    "material": "dirt",
+    "type": 3
+  },
+  {
+    "meta": 0,
+    "name": "Cobblestone",
+    "material": "cobblestone",
+    "type": 4
+  },
+  {
+    "meta": 0,
+    "name": "Oak Wood Plank",
+    "material": "wood",
+    "type": 5
+  },
+  {
+    "meta": 1,
+    "name": "Spruce Wood Plank",
+    "material": "wood",
+    "type": 5
+  },
+  {
+    "meta": 2,
+    "name": "Birch Wood Plank",
+    "material": "wood",
+    "type": 5
+  },
+  {
+    "meta": 3,
+    "name": "Jungle Wood Plank",
+    "material": "wood",
+    "type": 5
+  },
+  {
+    "meta": 4,
+    "name": "Acacia Wood Plank",
+    "material": "wood",
+    "type": 5
+  },
+  {
+    "meta": 5,
+    "name": "Dark Oak Wood Plank",
+    "material": "wood",
+    "type": 5
+  },
+  {
+    "meta": 0,
+    "name": "Oak Sapling",
+    "material": "sapling",
+    "type": 6
+  },
+  {
+    "meta": 1,
+    "name": "Spruce Sapling",
+    "material": "sapling",
+    "type": 6
+  },
+  {
+    "meta": 2,
+    "name": "Birch Sapling",
+    "material": "sapling",
+    "type": 6
+  },
+  {
+    "meta": 3,
+    "name": "Jungle Sapling",
+    "material": "sapling",
+    "type": 6
+  },
+  {
+    "meta": 4,
+    "name": "Acacia Sapling",
+    "material": "sapling",
+    "type": 6
+  },
+  {
+    "meta": 5,
+    "name": "Dark Oak Sapling",
+    "material": "sapling",
+    "type": 6
+  },
+  {
+    "meta": 0,
+    "name": "bedrock",
+    "material": "bedrock",
+    "type": 7
+  },
+  {
+    "meta": 0,
+    "name": "Flowing Water",
+    "material": "flowing_water",
+    "type": 8
+  },
+  {
+    "meta": 0,
+    "name": "Water",
+    "material": "stationary_water",
+    "type": 9
+  },
+  {
+    "meta": 0,
+    "name": "Flowing Lava",
+    "material": "flowing_lava",
+    "type": 10
+  },
+  {
+    "meta": 0,
+    "name": "Lava",
+    "material": "lava",
+    "type": 11
+  },
+  {
+    "meta": 0,
+    "name": "Sand",
+    "material": "sand",
+    "type": 12
+  },
+  {
+    "meta": 1,
+    "name": "Red Sand",
+    "material": "sand",
+    "type": 12
+  },
+  {
+    "meta": 0,
+    "name": "Gravel",
+    "material": "gravel",
+    "type": 13
+  },
+  {
+    "meta": 0,
+    "name": "Gold Ore",
+    "material": "gold_ore",
+    "type": 14
+  },
+  {
+    "meta": 0,
+    "name": "Iron Ore",
+    "material": "iron_ore",
+    "type": 15
+  },
+  {
+    "meta": 0,
+    "name": "Coal Ore",
+    "material": "coal_ore",
+    "type": 16
+  },
+  {
+    "meta": 0,
+    "name": "Oak Wood",
+    "material": "log",
+    "type": 17
+  },
+  {
+    "meta": 1,
+    "name": "Spruce Wood",
+    "material": "log",
+    "type": 17
+  },
+  {
+    "meta": 2,
+    "name": "Birch Wood",
+    "material": "log",
+    "type": 17
+  },
+  {
+    "meta": 3,
+    "name": "Jungle Wood",
+    "material": "log",
+    "type": 17
+  },
+  {
+    "meta": 0,
+    "name": "Oak Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 1,
+    "name": "Spruce Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 2,
+    "name": "Birch Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 3,
+    "name": "Jungle Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 4,
+    "name": "Oak Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 5,
+    "name": "Spruce Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 6,
+    "name": "Birch Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 7,
+    "name": "Jungle Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 8,
+    "name": "Oak Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 9,
+    "name": "Spruce Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 10,
+    "name": "Birch Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 11,
+    "name": "Jungle Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 12,
+    "name": "Oak Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 13,
+    "name": "Spruce Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 14,
+    "name": "Birch Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 15,
+    "name": "Jungle Leaves",
+    "material": "leaves",
+    "type": 18
+  },
+  {
+    "meta": 0,
+    "name": "Sponge",
+    "material": "sponge",
+    "type": 19
+  },
+  {
+    "meta": 1,
+    "name": "Wet Sponge",
+    "material": "sponge",
+    "type": 19
+  },
+  {
+    "meta": 0,
+    "name": "Glass",
+    "material": "glass",
+    "type": 20
+  },
+  {
+    "meta": 0,
+    "name": "Lapis Lazuli Ore",
+    "material": "lapis_ore",
+    "type": 21
+  },
+  {
+    "meta": 0,
+    "name": "Lapis Lazuli Block",
+    "material": "lapis_block",
+    "type": 22
+  },
+  {
+    "meta": 0,
+    "name": "Dispenser",
+    "material": "dispenser",
+    "type": 23
+  },
+  {
+    "meta": 0,
+    "name": "Sandstone",
+    "material": "sandstone",
+    "type": 24
+  },
+  {
+    "meta": 1,
+    "name": "Chiseled Sandstone",
+    "material": "sandstone",
+    "type": 24
+  },
+  {
+    "meta": 2,
+    "name": "Smooth Sandstone",
+    "material": "sandstone",
+    "type": 24
+  },
+  {
+    "meta": 0,
+    "name": "Note Block",
+    "material": "note_block",
+    "type": 25
+  },
+  {
+    "meta": 0,
+    "name": "Bed",
+    "material": "bed_block",
+    "type": 26
+  },
+  {
+    "meta": 0,
+    "name": "Powered Rail",
+    "material": "powered_rail",
+    "type": 27
+  },
+  {
+    "meta": 0,
+    "name": "Detector Rail",
+    "material": "detector_rail",
+    "type": 28
+  },
+  {
+    "meta": 0,
+    "name": "Sticky Piston",
+    "material": "piston_sticky_base",
+    "type": 29
+  },
+  {
+    "meta": 0,
+    "name": "Cobweb",
+    "material": "web",
+    "type": 30
+  },
+  {
+    "meta": 0,
+    "name": "Dead Shrub",
+    "material": "long_grass",
+    "type": 31
+  },
+  {
+    "meta": 1,
+    "name": "Grass",
+    "material": "long_grass",
+    "type": 31
+  },
+  {
+    "meta": 2,
+    "name": "Fern",
+    "material": "talle",
+    "type": 31
+  },
+  {
+    "meta": 0,
+    "name": "Dead Bush",
+    "material": "dead_bush",
+    "type": 32
+  },
+  {
+    "meta": 0,
+    "name": "Piston",
+    "material": "piston_base",
+    "type": 33
+  },
+  {
+    "meta": 0,
+    "name": "Piston Head",
+    "material": "piston_head",
+    "type": 34
+  },
+  {
+    "meta": 0,
+    "name": "White Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 1,
+    "name": "Orange Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 2,
+    "name": "Magenta Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 3,
+    "name": "Light Blue Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 4,
+    "name": "Yellow Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 5,
+    "name": "Lime Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 6,
+    "name": "Pink Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 7,
+    "name": "Gray Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 8,
+    "name": "Light Gray Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 9,
+    "name": "Cyan Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 10,
+    "name": "Purple Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 11,
+    "name": "Blue Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 12,
+    "name": "Brown Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 13,
+    "name": "Green Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 14,
+    "name": "Red Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 15,
+    "name": "Black Wool",
+    "material": "wool",
+    "type": 35
+  },
+  {
+    "meta": 0,
+    "name": "Dandelion",
+    "material": "yellow_flower",
+    "type": 37
+  },
+  {
+    "meta": 0,
+    "name": "Poppy",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 1,
+    "name": "Blue Orchid",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 2,
+    "name": "Allium",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 3,
+    "name": "Azure Bluet",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 4,
+    "name": "Red Tulip",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 5,
+    "name": "Orange Tulip",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 6,
+    "name": "White Tulip",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 7,
+    "name": "Pink Tulip",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 8,
+    "name": "Oxeye Daisy",
+    "material": "red_rose",
+    "type": 38
+  },
+  {
+    "meta": 0,
+    "name": "Brown Mushroom",
+    "material": "brown_mushroom",
+    "type": 39
+  },
+  {
+    "meta": 0,
+    "name": "Red Mushroom",
+    "material": "red_mushroom",
+    "type": 40
+  },
+  {
+    "meta": 0,
+    "name": "Gold Block",
+    "material": "gold_block",
+    "type": 41
+  },
+  {
+    "meta": 0,
+    "name": "Iron Block",
+    "material": "iron_block",
+    "type": 42
+  },
+  {
+    "meta": 0,
+    "name": "Double Stone Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 1,
+    "name": "Double Sandstone Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 2,
+    "name": "Double Wooden Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 3,
+    "name": "Double Cobblestone Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 4,
+    "name": "Double Brick Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 5,
+    "name": "Double Stone Brick Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 6,
+    "name": "Double Nether Brick Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 7,
+    "name": "Double Quartz Slab",
+    "material": "double_step",
+    "type": 43
+  },
+  {
+    "meta": 0,
+    "name": "Stone Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 1,
+    "name": "Sandstone Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 2,
+    "name": "Wooden Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 3,
+    "name": "Cobblestone Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 4,
+    "name": "Brick Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 5,
+    "name": "Stone Brick Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 6,
+    "name": "Nether Brick Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 7,
+    "name": "Quartz Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 8,
+    "name": "Stone Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 9,
+    "name": "Sandstone Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 10,
+    "name": "Wooden Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 11,
+    "name": "Cobblestone Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 12,
+    "name": "Brick Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 13,
+    "name": "Stone Brick Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 14,
+    "name": "Nether Brick Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 15,
+    "name": "Quartz Slab",
+    "material": "step",
+    "type": 44
+  },
+  {
+    "meta": 0,
+    "name": "Bricks",
+    "material": "brick_block",
+    "type": 45
+  },
+  {
+    "meta": 0,
+    "name": "TNT",
+    "material": "tnt",
+    "type": 46
+  },
+  {
+    "meta": 0,
+    "name": "Bookshelf",
+    "material": "bookshelf",
+    "type": 47
+  },
+  {
+    "meta": 0,
+    "name": "Moss Stone",
+    "material": "mossy_cobblestone",
+    "type": 48
+  },
+  {
+    "meta": 0,
+    "name": "Obsidian",
+    "material": "obsidian",
+    "type": 49
+  },
+  {
+    "meta": 0,
+    "name": "Torch",
+    "material": "torch",
+    "type": 50
+  },
+  {
+    "meta": 0,
+    "name": "Fire",
+    "material": "fire",
+    "type": 51
+  },
+  {
+    "meta": 0,
+    "name": "Monster Spawner",
+    "material": "mob_spawner",
+    "type": 52
+  },
+  {
+    "meta": 0,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Oak Wood Stairs",
+    "material": "wood_stairs",
+    "type": 53,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Chest",
+    "material": "chest",
+    "type": 54
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Wire",
+    "material": "redstone_wire",
+    "type": 55
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Ore",
+    "material": "diamond_ore",
+    "type": 56
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Block",
+    "material": "diamond_block",
+    "type": 57
+  },
+  {
+    "meta": 0,
+    "name": "Crafting Table",
+    "material": "workbench",
+    "type": 58
+  },
+  {
+    "meta": 0,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 0,
+    "type": 59
+  },
+  {
+    "meta": 1,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 1,
+    "type": 59
+  },
+  {
+    "meta": 2,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 2,
+    "type": 59
+  },
+  {
+    "meta": 3,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 3,
+    "type": 59
+  },
+  {
+    "meta": 4,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 4,
+    "type": 59
+  },
+  {
+    "meta": 5,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 5,
+    "type": 59
+  },
+  {
+    "meta": 6,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 6,
+    "type": 59
+  },
+  {
+    "meta": 7,
+    "name": "Wheat Crops",
+    "material": "crops",
+    "height" : 7,
+    "type": 59
+  },
+  {
+    "meta": 0,
+    "name": "Farmland",
+    "material": "soil",
+    "type": 60
+  },
+  {
+    "meta": 0,
+    "name": "Furnace",
+    "material": "furnace",
+    "type": 61
+  },
+  {
+    "meta": 0,
+    "name": "Burning Furnace",
+    "material": "lit_furnace",
+    "type": 62
+  },
+  {
+    "meta": 0,
+    "name": "Standing Sign Block",
+    "material": "standing_sign",
+    "type": 63
+  },
+  {
+    "meta": 0,
+    "name": "Oak Door Block",
+    "material": "wooden_door",
+    "type": 64
+  },
+  {
+    "meta": 0,
+    "name": "Ladder",
+    "material": "ladder",
+    "type": 65
+  },
+  {
+    "meta": 0,
+    "name": "Rail",
+    "material": "rails",
+    "type": 66
+  },
+  {
+    "meta": 0,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Cobblestone Stairs",
+    "material": "cobblestone_stairs",
+    "type": 67,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Wall-mounted Sign Block",
+    "material": "wall_sign",
+    "type": 68
+  },
+  {
+    "meta": 0,
+    "name": "Lever",
+    "material": "lever",
+    "type": 69
+  },
+  {
+    "meta": 0,
+    "name": "Stone Pressure Plate",
+    "material": "stone_plate",
+    "type": 70
+  },
+  {
+    "meta": 0,
+    "name": "Iron Door Block",
+    "material": "iron_door",
+    "type": 71
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Pressure Plate",
+    "material": "wood_plate",
+    "type": 72
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Ore",
+    "material": "redstone_ore",
+    "type": 73
+  },
+  {
+    "meta": 0,
+    "name": "Glowing Redstone Ore",
+    "material": "lit_redstone_ore",
+    "type": 74
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Torch (off)",
+    "material": "redstone_torch_off",
+    "type": 75
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Torch (on)",
+    "material": "redstone_torch_on",
+    "type": 76
+  },
+  {
+    "meta": 0,
+    "name": "Stone Button",
+    "material": "stone_button",
+    "type": 77
+  },
+  {
+    "meta": 0,
+    "name": "Snow",
+    "material": "snow",
+    "type": 78
+  },
+  {
+    "meta": 0,
+    "name": "Ice",
+    "material": "ice",
+    "type": 79
+  },
+  {
+    "meta": 0,
+    "name": "Snow Block",
+    "material": "snow_block",
+    "type": 80
+  },
+  {
+    "meta": 0,
+    "name": "Cactus",
+    "material": "cactus",
+    "type": 81
+  },
+  {
+    "meta": 0,
+    "name": "Clay",
+    "material": "clay",
+    "type": 82
+  },
+  {
+    "meta": 0,
+    "name": "Sugar Canes",
+    "material": "sugar_cane_block",
+    "type": 83
+  },
+  {
+    "meta": 0,
+    "name": "Jukebox",
+    "material": "jukebox",
+    "type": 84
+  },
+  {
+    "meta": 0,
+    "name": "Oak Fence",
+    "material": "fence",
+    "type": 85
+  },
+  {
+    "meta": 0,
+    "name": "Pumpkin",
+    "material": "pumpkin",
+    "type": 86
+  },
+  {
+    "meta": 0,
+    "name": "Netherrack",
+    "material": "netherrack",
+    "type": 87
+  },
+  {
+    "meta": 0,
+    "name": "Soul Sand",
+    "material": "soul_sand",
+    "type": 88
+  },
+  {
+    "meta": 0,
+    "name": "Glowstone",
+    "material": "glowstone",
+    "type": 89
+  },
+  {
+    "meta": 0,
+    "name": "Nether Portal",
+    "material": "portal",
+    "type": 90
+  },
+  {
+    "meta": 0,
+    "name": "Jack o'Lantern",
+    "material": "jack_o_lantern",
+    "type": 91
+  },
+  {
+    "meta": 0,
+    "name": "Cake Block",
+    "material": "cake",
+    "type": 92
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Repeater Block (off)",
+    "material": "diode_block_off",
+    "type": 93
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Repeater Block (on)",
+    "material": "powered_repeater",
+    "type": 94
+  },
+  {
+    "meta": 0,
+    "name": "White Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 1,
+    "name": "Orange Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 2,
+    "name": "Magenta Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 3,
+    "name": "Light Blue Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 4,
+    "name": "Yellow Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 5,
+    "name": "Lime Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 6,
+    "name": "Pink Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 7,
+    "name": "Gray Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 8,
+    "name": "Light Gray Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 9,
+    "name": "Cyan Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 10,
+    "name": "Purple Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 11,
+    "name": "Blue Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 12,
+    "name": "Brown Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 13,
+    "name": "Green Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 14,
+    "name": "Red Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 15,
+    "name": "Black Stained Glass",
+    "material": "stained_glass",
+    "type": 95
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Trapdoor",
+    "material": "trap_door",
+    "type": 96
+  },
+  {
+    "meta": 0,
+    "name": "Stone Monster Egg",
+    "material": "monster_eggs",
+    "type": 97
+  },
+  {
+    "meta": 1,
+    "name": "Cobblestone Monster Egg",
+    "material": "monster_eggs",
+    "type": 97
+  },
+  {
+    "meta": 2,
+    "name": "Stone Brick Monster Egg",
+    "material": "monster_eggs",
+    "type": 97
+  },
+  {
+    "meta": 3,
+    "name": "Mossy Stone Brick Monster Egg",
+    "material": "monster_eggs",
+    "type": 97
+  },
+  {
+    "meta": 4,
+    "name": "Cracked Stone Brick Monster Egg",
+    "material": "monster_eggs",
+    "type": 97
+  },
+  {
+    "meta": 5,
+    "name": "Chiseled Stone Brick Monster Egg",
+    "material": "monster_eggs",
+    "type": 97
+  },
+  {
+    "meta": 0,
+    "name": "Stone Bricks",
+    "material": "smooth_brick",
+    "type": 98
+  },
+  {
+    "meta": 1,
+    "name": "Mossy Stone Bricks",
+    "material": "smooth_brick",
+    "type": 98
+  },
+  {
+    "meta": 2,
+    "name": "Cracked Stone Bricks",
+    "material": "smooth_brick",
+    "type": 98
+  },
+  {
+    "meta": 3,
+    "name": "Chiseled Stone Bricks",
+    "material": "smooth_brick",
+    "type": 98
+  },
+  {
+    "meta": 0,
+    "name": "Brown Mushroom Block",
+    "material": "huge_mushroom_1",
+    "type": 99
+  },
+  {
+    "meta": 0,
+    "name": "Red Mushroom Block",
+    "material": "huge_mushroom_2",
+    "type": 100
+  },
+  {
+    "meta": 0,
+    "name": "Iron Bars",
+    "material": "iron_fence",
+    "type": 101
+  },
+  {
+    "meta": 0,
+    "name": "Glass Pane",
+    "material": "thin_glass",
+    "type": 102
+  },
+  {
+    "meta": 0,
+    "name": "Melon Block",
+    "material": "melon_block",
+    "type": 103
+  },
+  {
+    "meta": 0,
+    "name": "Pumpkin Stem",
+    "material": "pumpkin_stem",
+    "type": 104
+  },
+  {
+    "meta": 0,
+    "name": "Melon Stem",
+    "material": "melon_stem",
+    "type": 105
+  },
+  {
+    "meta": 0,
+    "name": "Vines",
+    "material": "vine",
+    "type": 106
+  },
+  {
+    "meta": 0,
+    "name": "Oak Fence Gate",
+    "material": "fence_gate",
+    "type": 107
+  },
+  {
+    "meta": 0,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Brick Stairs",
+    "material": "brick_stairs",
+    "type": 108,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Stone Brick Stairs",
+    "material": "smooth_stairs",
+    "type": 109,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Mycelium",
+    "material": "mycel",
+    "type": 110
+  },
+  {
+    "meta": 0,
+    "name": "Lily Pad",
+    "material": "water_lily",
+    "type": 111
+  },
+  {
+    "meta": 0,
+    "name": "Nether Brick",
+    "material": "nether_brick",
+    "type": 112
+  },
+  {
+    "meta": 0,
+    "name": "Nether Brick Fence",
+    "material": "nether_fence",
+    "type": 113
+  },
+  {
+    "meta": 0,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Nether Brick Stairs",
+    "material": "nether_brick_stairs",
+    "type": 114,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Nether Wart",
+    "material": "nether_warts",
+    "type": 115
+  },
+  {
+    "meta": 0,
+    "name": "Enchantment Table",
+    "material": "enchantment_table",
+    "type": 116
+  },
+  {
+    "meta": 0,
+    "name": "Brewing Stand",
+    "material": "brewing_stand",
+    "type": 117
+  },
+  {
+    "meta": 0,
+    "name": "Cauldron",
+    "material": "cauldron",
+    "type": 118
+  },
+  {
+    "meta": 0,
+    "name": "Ender Portal",
+    "material": "ender_portal",
+    "type": 119
+  },
+  {
+    "meta": 0,
+    "name": "Ender Portal Frame",
+    "material": "ender_portal_frame",
+    "type": 120
+  },
+  {
+    "meta": 0,
+    "name": "Ender Stone",
+    "material": "ender_stone",
+    "type": 121
+  },
+  {
+    "meta": 0,
+    "name": "Dragon Egg",
+    "material": "dragon_egg",
+    "type": 122
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Lamp (inactive)",
+    "material": "redstone_lamp_off",
+    "type": 123
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Lamp (active)",
+    "material": "redstone_lamp_on",
+    "type": 124
+  },
+  {
+    "meta": 0,
+    "name": "Double Oak Wood Slab",
+    "material": "wood_double_step",
+    "type": 125
+  },
+  {
+    "meta": 1,
+    "name": "Double Spruce Wood Slab",
+    "material": "wood_double_step",
+    "type": 125
+  },
+  {
+    "meta": 2,
+    "name": "Double Birch Wood Slab",
+    "material": "wood_double_step",
+    "type": 125
+  },
+  {
+    "meta": 3,
+    "name": "Double Jungle Wood Slab",
+    "material": "wood_double_step",
+    "type": 125
+  },
+  {
+    "meta": 4,
+    "name": "Double Acacia Wood Slab",
+    "material": "wood_double_step",
+    "type": 125
+  },
+  {
+    "meta": 5,
+    "name": "Double Dark Oak Wood Slab",
+    "material": "wood_double_step",
+    "type": 125
+  },
+  {
+    "meta": 0,
+    "name": "Oak Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 1,
+    "name": "Spruce Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 2,
+    "name": "Birch Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 3,
+    "name": "Jungle Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 4,
+    "name": "Acacia Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 5,
+    "name": "Dark Oak Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 8,
+    "name": "Upper Oak Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 9,
+    "name": "Upper Spruce Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 10,
+    "name": "Upper Birch Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 11,
+    "name": "Upper Jungle Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 12,
+    "name": "Upper Acacia Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 13,
+    "name": "Upper Dark Oak Wood Slab",
+    "material": "wood_step",
+    "type": 126
+  },
+  {
+    "meta": 0,
+    "name": "Cocoa",
+    "material": "cocoa",
+    "type": 127
+  },
+  {
+    "meta": 0,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128
+  },
+    {
+    "meta": 0,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Sandstone Stairs",
+    "material": "sandstone_stairs",
+    "type": 128,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Emerald Ore",
+    "material": "emerald_ore",
+    "type": 129
+  },
+  {
+    "meta": 0,
+    "name": "Ender Chest",
+    "material": "ender_chest",
+    "type": 130
+  },
+  {
+    "meta": 0,
+    "name": "Tripwire Hook",
+    "material": "tripwire_hook",
+    "type": 131
+  },
+  {
+    "meta": 0,
+    "name": "Tripwire",
+    "material": "tripwire_hook",
+    "type": 132
+  },
+  {
+    "meta": 0,
+    "name": "Emerald Block",
+    "material": "emerald_block",
+    "type": 133
+  },
+  {
+    "meta": 0,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Spruce Wood Stairs",
+    "material": "spruce_wood_stairs",
+    "type": 134,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Birch Wood Stairs",
+    "material": "birch_wood_stairs",
+    "type": 135,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Jungle Wood Stairs",
+    "material": "jungle_wood_stairs",
+    "type": 136,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Command Block",
+    "material": "command",
+    "type": 137
+  },
+  {
+    "meta": 0,
+    "name": "Command Repeating Block",
+    "material": "command_repeating",
+    "type": 210
+  },
+  {
+    "meta": 0,
+    "name": "Command Chain Block",
+    "material": "command_chain",
+    "type": 211
+  },
+  {
+    "meta": 0,
+    "name": "Beacon",
+    "material": "beacon",
+    "type": 138
+  },
+  {
+    "meta": 0,
+    "name": "Cobblestone Wall",
+    "material": "cobblestone_wall",
+    "type": 139
+  },
+  {
+    "meta": 1,
+    "name": "Mossy Cobblestone Wall",
+    "material": "cobblestone_wall",
+    "type": 139
+  },
+  {
+    "meta": 0,
+    "name": "Flower Pot",
+    "material": "flower_pot",
+    "type": 140
+  },
+  {
+    "meta": 0,
+    "name": "Carrots",
+    "material": "carrots",
+    "type": 141
+  },
+  {
+    "meta": 0,
+    "name": "Potatoes",
+    "material": "potatoes",
+    "type": 142
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Button",
+    "material": "wooden_button",
+    "type": 143
+  },
+  {
+    "meta": 0,
+    "name": "Mob Head",
+    "material": "skull",
+    "type": 144
+  },
+  {
+    "meta": 0,
+    "name": "Anvil",
+    "material": "anvil",
+    "type": 145
+  },
+  {
+    "meta": 0,
+    "name": "Trapped Chest",
+    "material": "trapped_chest",
+    "type": 146
+  },
+  {
+    "meta": 0,
+    "name": "Weighted Pressure Plate (light)",
+    "material": "gold_plate",
+    "type": 147
+  },
+  {
+    "meta": 0,
+    "name": "Weighted Pressure Plate (heavy)",
+    "material": "iron_plate",
+    "type": 148
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Comparator (inactive)",
+    "material": "unpowered_comparator",
+    "type": 149
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Comparator (active)",
+    "material": "powered_comparator",
+    "type": 150
+  },
+  {
+    "meta": 0,
+    "name": "Daylight Sensor",
+    "material": "daylight_detector",
+    "type": 151
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Block",
+    "material": "redstone_block",
+    "type": 152
+  },
+  {
+    "meta": 0,
+    "name": "Nether Quartz Ore",
+    "material": "quartz_ore",
+    "type": 153
+  },
+  {
+    "meta": 0,
+    "name": "Hopper",
+    "material": "hopper",
+    "type": 154
+  },
+  {
+    "meta": 0,
+    "name": "Quartz Block",
+    "material": "quartz_block",
+    "type": 155
+  },
+  {
+    "meta": 1,
+    "name": "Chiseled Quartz Block",
+    "material": "quartz_block",
+    "type": 155
+  },
+  {
+    "meta": 2,
+    "name": "Pillar Quartz Block",
+    "material": "quartz_block",
+    "type": 155
+  },
+  {
+    "meta": 0,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Quartz Stairs",
+    "material": "quartz_stairs",
+    "type": 156,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Activator Rail",
+    "material": "activator_rail",
+    "type": 157
+  },
+  {
+    "meta": 0,
+    "name": "Dropper",
+    "material": "dropper",
+    "type": 158
+  },
+  {
+    "meta": 0,
+    "name": "White Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 1,
+    "name": "Orange Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 2,
+    "name": "Magenta Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 3,
+    "name": "Light Blue Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 4,
+    "name": "Yellow Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 5,
+    "name": "Lime Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 6,
+    "name": "Pink Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 7,
+    "name": "Gray Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 8,
+    "name": "Light Gray Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 9,
+    "name": "Cyan Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 10,
+    "name": "Purple Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 11,
+    "name": "Blue Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 12,
+    "name": "Brown Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 13,
+    "name": "Green Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 14,
+    "name": "Red Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 15,
+    "name": "Black Stained Clay",
+    "material": "stained_clay",
+    "type": 159
+  },
+  {
+    "meta": 0,
+    "name": "White Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 1,
+    "name": "Orange Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 2,
+    "name": "Magenta Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 3,
+    "name": "Light Blue Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 4,
+    "name": "Yellow Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 5,
+    "name": "Lime Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 6,
+    "name": "Pink Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 7,
+    "name": "Gray Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 8,
+    "name": "Light Gray Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 9,
+    "name": "Cyan Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 10,
+    "name": "Purple Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 11,
+    "name": "Blue Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 12,
+    "name": "Brown Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 13,
+    "name": "Green Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 14,
+    "name": "Red Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 15,
+    "name": "Black Stained Glass Pane",
+    "material": "stained_glass_pane",
+    "type": 160
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 1,
+    "name": "Dark Oak Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 4,
+    "name": "Acacia Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 5,
+    "name": "Dark Oak Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 8,
+    "name": "Acacia Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 9,
+    "name": "Dark Oak Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 12,
+    "name": "Acacia Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 13,
+    "name": "Dark Oak Leaves",
+    "material": "leaves_2",
+    "type": 161
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Wood",
+    "material": "log_2",
+    "type": 162
+  },
+  {
+    "meta": 1,
+    "name": "Dark Oak Wood",
+    "material": "log_2",
+    "type": 162
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Acacia Wood Stairs",
+    "material": "acacia_stairs",
+    "type": 163,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Dark Oak Wood Stairs",
+    "material": "dark_oak_stairs",
+    "type": 164,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Slime Block",
+    "material": "slime_block",
+    "type": 165
+  },
+  {
+    "meta": 0,
+    "name": "Barrier",
+    "material": "barrier",
+    "type": 166
+  },
+  {
+    "meta": 0,
+    "name": "Iron Trapdoor",
+    "material": "iron_trapdoor",
+    "type": 167
+  },
+  {
+    "meta": 0,
+    "name": "Prismarine",
+    "material": "prismarine",
+    "type": 168
+  },
+  {
+    "meta": 1,
+    "name": "Prismarine Bricks",
+    "material": "prismarine",
+    "type": 168
+  },
+  {
+    "meta": 2,
+    "name": "Dark Prismarine",
+    "material": "prismarine",
+    "type": 168
+  },
+  {
+    "meta": 0,
+    "name": "Sea Lantern",
+    "material": "sea_lantern",
+    "type": 169
+  },
+  {
+    "meta": 0,
+    "name": "Hay Bale",
+    "material": "hay_block",
+    "type": 170
+  },
+  {
+    "meta": 0,
+    "name": "White Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 1,
+    "name": "Orange Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 2,
+    "name": "Magenta Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 3,
+    "name": "Light Blue Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 4,
+    "name": "Yellow Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 5,
+    "name": "Lime Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 6,
+    "name": "Pink Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 7,
+    "name": "Gray Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 8,
+    "name": "Light Gray Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 9,
+    "name": "Cyan Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 10,
+    "name": "Purple Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 11,
+    "name": "Blue Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 12,
+    "name": "Brown Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 13,
+    "name": "Green Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 14,
+    "name": "Red Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 15,
+    "name": "Black Carpet",
+    "material": "carpet",
+    "type": 171
+  },
+  {
+    "meta": 0,
+    "name": "Hardened Clay",
+    "material": "hard_clay",
+    "type": 172
+  },
+  {
+    "meta": 0,
+    "name": "Block of Coal",
+    "material": "coal_block",
+    "type": 173
+  },
+  {
+    "meta": 0,
+    "name": "Packed Ice",
+    "material": "packed_ice",
+    "type": 174
+  },
+  {
+    "meta": 0,
+    "name": "Sunflower",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 1,
+    "name": "Lilac",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 2,
+    "name": "Double Tallgrass",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 3,
+    "name": "Large Fern",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 4,
+    "name": "Rose Bush",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 5,
+    "name": "Peony",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 0,
+    "name": "Tall Plant",
+    "material": "double_plant",
+    "type": 175
+  },
+  {
+    "meta": 0,
+    "name": "Free-standing Banner",
+    "material": "standing_banner",
+    "type": 176
+  },
+  {
+    "meta": 0,
+    "name": "Wall-mounted Banner",
+    "material": "wall_banner",
+    "type": 177
+  },
+  {
+    "meta": 0,
+    "name": "Inverted Daylight Sensor",
+    "material": "daylight_detector_inverted",
+    "type": 178
+  },
+  {
+    "meta": 0,
+    "name": "Red Sandstone",
+    "material": "red_sandstone",
+    "type": 179
+  },
+  {
+    "meta": 1,
+    "name": "Chiseled Red Sandstone",
+    "material": "red_sandstone",
+    "type": 179
+  },
+  {
+    "meta": 2,
+    "name": "Smooth Red Sandstone",
+    "material": "red_sandstone",
+    "type": 179
+  },
+  {
+    "meta": 0,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Red Sandstone Stairs",
+    "material": "red_sandstone_stairs",
+    "type": 180,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Double Red Sandstone Slab",
+    "material": "double_stone_slab2",
+    "type": 181
+  },
+  {
+    "meta": 0,
+    "name": "Red Sandstone Slab",
+    "material": "stone_slab2",
+    "type": 182
+  },
+  {
+    "meta": 0,
+    "name": "Spruce Fence Gate",
+    "material": "spruce_fence_gate",
+    "type": 183
+  },
+  {
+    "meta": 0,
+    "name": "Birch Fence Gate",
+    "material": "birch_fence_gate",
+    "type": 184
+  },
+  {
+    "meta": 0,
+    "name": "Jungle Fence Gate",
+    "material": "jungle_fence_gate",
+    "type": 185
+  },
+  {
+    "meta": 0,
+    "name": "Dark Oak Fence Gate",
+    "material": "dark_oak_fence_gate",
+    "type": 186
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Fence Gate",
+    "material": "acacia_fence_gate",
+    "type": 187
+  },
+  {
+    "meta": 0,
+    "name": "Spruce Fence",
+    "material": "spruce_fence",
+    "type": 188
+  },
+  {
+    "meta": 0,
+    "name": "Birch Fence",
+    "material": "birch_fence",
+    "type": 189
+  },
+  {
+    "meta": 0,
+    "name": "Jungle Fence",
+    "material": "jungle_fence",
+    "type": 190
+  },
+  {
+    "meta": 0,
+    "name": "Dark Oak Fence",
+    "material": "dark_oak_fence",
+    "type": 191
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Fence",
+    "material": "acacia_fence",
+    "type": 192
+  },
+  {
+    "meta": 0,
+    "name": "Spruce Door Block",
+    "material": "spruce_door",
+    "type": 193
+  },
+  {
+    "meta": 0,
+    "name": "Birch Door Block",
+    "material": "birch_door",
+    "type": 194
+  },
+  {
+    "meta": 0,
+    "name": "Jungle Door Block",
+    "material": "jungle_door",
+    "type": 195
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Door Block",
+    "material": "acacia_door",
+    "type": 196
+  },
+  {
+    "meta": 0,
+    "name": "Dark Oak Door Block",
+    "material": "dark_oak_door",
+    "type": 197
+  },
+  {
+    "meta": 0,
+    "name": "End Rod",
+    "material": "end_rod",
+    "type": 198
+  },
+  {
+    "meta": 0,
+    "name": "Chorus Plant",
+    "material": "chorus_plant",
+    "type": 199
+  },
+  {
+    "meta": 0,
+    "name": "Chorus Flower",
+    "material": "chorus_flower",
+    "type": 200
+  },
+  {
+    "meta": 0,
+    "name": "Purpur Block",
+    "material": "purpur_block",
+    "type": 201
+  },
+  {
+    "meta": 0,
+    "name": "Purpur Pillar",
+    "material": "purpur_pillar",
+    "type": 202
+  },
+  {
+    "meta": 0,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "East",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 1,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "West",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 2,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "South",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 3,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "North",
+    "orientation" : "Up"
+  },
+  {
+    "meta": 4,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "East",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 5,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "West",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 6,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "South",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 7,
+    "name": "Purpur Stairs",
+    "material": "purpur_stairs",
+    "type": 203,
+    "cardinal" : "North",
+    "orientation" : "Down"
+  },
+  {
+    "meta": 0,
+    "name": "Purpur Double Slab",
+    "material": "purpur_double_slab",
+    "type": 204
+  },
+  {
+    "meta": 0,
+    "name": "Purpur Slab",
+    "material": "purpur_slab",
+    "type": 205
+  },
+  {
+    "meta": 0,
+    "name": "End Stone Bricks",
+    "material": "end_bricks",
+    "type": 206
+  },
+  {
+    "meta": 0,
+    "name": "Beetroot Block",
+    "material": "beetroots",
+    "type": 207
+  },
+  {
+    "meta": 0,
+    "name": "Grass Path",
+    "material": "grass_path",
+    "type": 208
+  },
+  {
+    "meta": 0,
+    "name": "End Gateway",
+    "material": "end_gateway",
+    "type": 209
+  },
+  {
+    "meta": 0,
+    "name": "Repeating Command Block",
+    "material": "repeating_command_block",
+    "type": 210
+  },
+  {
+    "meta": 0,
+    "name": "Chain Command Block",
+    "material": "chain_command_block",
+    "type": 211
+  },
+  {
+    "meta": 0,
+    "name": "Frosted Ice",
+    "material": "frosted_ice",
+    "type": 212
+  },
+  {
+    "meta": 0,
+    "name": "Nether Wart Block",
+    "material": "nether_wart_block",
+    "type": 214
+  },
+  {
+    "meta": 0,
+    "name": "Structure Block",
+    "material": "structure_block",
+    "type": 255
+  },
+  {
+    "meta": 0,
+    "name": "Iron Shovel",
+    "material": "iron_shovel",
+    "type": 256
+  },
+  {
+    "meta": 0,
+    "name": "Iron Pickaxe",
+    "material": "iron_pickaxe",
+    "type": 257
+  },
+  {
+    "meta": 0,
+    "name": "Iron Axe",
+    "material": "iron_axe",
+    "type": 258
+  },
+  {
+    "meta": 0,
+    "name": "Flint and Steel",
+    "material": "flint_and_steel",
+    "type": 259
+  },
+  {
+    "meta": 0,
+    "name": "Apple",
+    "material": "apple",
+    "type": 260
+  },
+  {
+    "meta": 0,
+    "name": "Bow",
+    "material": "bow",
+    "type": 261
+  },
+  {
+    "meta": 0,
+    "name": "Arrow",
+    "material": "arrow",
+    "type": 262
+  },
+  {
+    "meta": 0,
+    "name": "Coal",
+    "material": "coal",
+    "type": 263
+  },
+  {
+    "meta": 1,
+    "name": "Charcoal",
+    "material": "coal",
+    "type": 263
+  },
+  {
+    "meta": 0,
+    "name": "Diamond",
+    "material": "diamond",
+    "type": 264
+  },
+  {
+    "meta": 0,
+    "name": "Iron Ingot",
+    "material": "iron_ingot",
+    "type": 265
+  },
+  {
+    "meta": 0,
+    "name": "Gold Ingot",
+    "material": "gold_ingot",
+    "type": 266
+  },
+  {
+    "meta": 0,
+    "name": "Iron Sword",
+    "material": "iron_sword",
+    "type": 267
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Sword",
+    "material": "wooden_sword",
+    "type": 268
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Shovel",
+    "material": "wooden_shovel",
+    "type": 269
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Pickaxe",
+    "material": "wooden_pickaxe",
+    "type": 270
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Axe",
+    "material": "wooden_axe",
+    "type": 271
+  },
+  {
+    "meta": 0,
+    "name": "Stone Sword",
+    "material": "stone_sword",
+    "type": 272
+  },
+  {
+    "meta": 0,
+    "name": "Stone Shovel",
+    "material": "stone_shovel",
+    "type": 273
+  },
+  {
+    "meta": 0,
+    "name": "Stone Pickaxe",
+    "material": "stone_pickaxe",
+    "type": 274
+  },
+  {
+    "meta": 0,
+    "name": "Stone Axe",
+    "material": "stone_axe",
+    "type": 275
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Sword",
+    "material": "diamond_sword",
+    "type": 276
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Shovel",
+    "material": "diamond_shovel",
+    "type": 277
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Pickaxe",
+    "material": "diamond_pickaxe",
+    "type": 278
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Axe",
+    "material": "diamond_axe",
+    "type": 279
+  },
+  {
+    "meta": 0,
+    "name": "Stick",
+    "material": "stick",
+    "type": 280
+  },
+  {
+    "meta": 0,
+    "name": "Bowl",
+    "material": "bowl",
+    "type": 281
+  },
+  {
+    "meta": 0,
+    "name": "Mushroom Stew",
+    "material": "mushroom_stew",
+    "type": 282
+  },
+  {
+    "meta": 0,
+    "name": "Golden Sword",
+    "material": "golden_sword",
+    "type": 283
+  },
+  {
+    "meta": 0,
+    "name": "Golden Shovel",
+    "material": "golden_shovel",
+    "type": 284
+  },
+  {
+    "meta": 0,
+    "name": "Golden Pickaxe",
+    "material": "golden_pickaxe",
+    "type": 285
+  },
+  {
+    "meta": 0,
+    "name": "Golden Axe",
+    "material": "golden_axe",
+    "type": 286
+  },
+  {
+    "meta": 0,
+    "name": "String",
+    "material": "string",
+    "type": 287
+  },
+  {
+    "meta": 0,
+    "name": "Feather",
+    "material": "feather",
+    "type": 288
+  },
+  {
+    "meta": 0,
+    "name": "Gunpowder",
+    "material": "gunpowder",
+    "type": 289
+  },
+  {
+    "meta": 0,
+    "name": "Wooden Hoe",
+    "material": "wooden_hoe",
+    "type": 290
+  },
+  {
+    "meta": 0,
+    "name": "Stone Hoe",
+    "material": "stone_hoe",
+    "type": 291
+  },
+  {
+    "meta": 0,
+    "name": "Iron Hoe",
+    "material": "iron_hoe",
+    "type": 292
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Hoe",
+    "material": "diamond_hoe",
+    "type": 293
+  },
+  {
+    "meta": 0,
+    "name": "Golden Hoe",
+    "material": "golden_hoe",
+    "type": 294
+  },
+  {
+    "meta": 0,
+    "name": "Wheat Seeds",
+    "material": "wheat_seeds",
+    "type": 295
+  },
+  {
+    "meta": 0,
+    "name": "Wheat",
+    "material": "wheat",
+    "type": 296
+  },
+  {
+    "meta": 0,
+    "name": "Bread",
+    "material": "bread",
+    "type": 297
+  },
+  {
+    "meta": 0,
+    "name": "Leather Helmet",
+    "material": "leather_helmet",
+    "type": 298
+  },
+  {
+    "meta": 0,
+    "name": "Leather Tunic",
+    "material": "leather_chestplate",
+    "type": 299
+  },
+  {
+    "meta": 0,
+    "name": "Leather Pants",
+    "material": "leather_leggings",
+    "type": 300
+  },
+  {
+    "meta": 0,
+    "name": "Leather Boots",
+    "material": "leather_boots",
+    "type": 301
+  },
+  {
+    "meta": 0,
+    "name": "Chainmail Helmet",
+    "material": "chainmail_helmet",
+    "type": 302
+  },
+  {
+    "meta": 0,
+    "name": "Chainmail Chestplate",
+    "material": "chainmail_chestplate",
+    "type": 303
+  },
+  {
+    "meta": 0,
+    "name": "Chainmail Leggings",
+    "material": "chainmail_leggings",
+    "type": 304
+  },
+  {
+    "meta": 0,
+    "name": "Chainmail Boots",
+    "material": "chainmail_boots",
+    "type": 305
+  },
+  {
+    "meta": 0,
+    "name": "Iron Helmet",
+    "material": "iron_helmet",
+    "type": 306
+  },
+  {
+    "meta": 0,
+    "name": "Iron Chestplate",
+    "material": "iron_chestplate",
+    "type": 307
+  },
+  {
+    "meta": 0,
+    "name": "Iron Leggings",
+    "material": "iron_leggings",
+    "type": 308
+  },
+  {
+    "meta": 0,
+    "name": "Iron Boots",
+    "material": "iron_boots",
+    "type": 309
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Helmet",
+    "material": "diamond_helmet",
+    "type": 310
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Chestplate",
+    "material": "diamond_chestplate",
+    "type": 311
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Leggings",
+    "material": "diamond_leggings",
+    "type": 312
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Boots",
+    "material": "diamond_boots",
+    "type": 313
+  },
+  {
+    "meta": 0,
+    "name": "Golden Helmet",
+    "material": "golden_helmet",
+    "type": 314
+  },
+  {
+    "meta": 0,
+    "name": "Golden Chestplate",
+    "material": "golden_chestplate",
+    "type": 315
+  },
+  {
+    "meta": 0,
+    "name": "Golden Leggings",
+    "material": "golden_leggings",
+    "type": 316
+  },
+  {
+    "meta": 0,
+    "name": "Golden Boots",
+    "material": "golden_boots",
+    "type": 317
+  },
+  {
+    "meta": 0,
+    "name": "Flint",
+    "material": "flint",
+    "type": 318
+  },
+  {
+    "meta": 0,
+    "name": "Raw Porkchop",
+    "material": "porkchop",
+    "type": 319
+  },
+  {
+    "meta": 0,
+    "name": "Cooked Porkchop",
+    "material": "cooked_porkchop",
+    "type": 320
+  },
+  {
+    "meta": 0,
+    "name": "Painting",
+    "material": "painting",
+    "type": 321
+  },
+  {
+    "meta": 0,
+    "name": "Golden Apple",
+    "material": "golden_apple",
+    "type": 322
+  },
+  {
+    "meta": 1,
+    "name": "Enchanted Golden Apple",
+    "material": "golden_apple",
+    "type": 322
+  },
+  {
+    "meta": 0,
+    "name": "Sign",
+    "material": "sign_post",
+    "type": 323
+  },
+  {
+    "meta": 0,
+    "name": "Oak Door",
+    "material": "wooden_door",
+    "type": 324
+  },
+  {
+    "meta": 0,
+    "name": "Bucket",
+    "material": "bucket",
+    "type": 325
+  },
+  {
+    "meta": 0,
+    "name": "Water Bucket",
+    "material": "water_bucket",
+    "type": 326
+  },
+  {
+    "meta": 0,
+    "name": "Lava Bucket",
+    "material": "lava_bucket",
+    "type": 327
+  },
+  {
+    "meta": 0,
+    "name": "Minecart",
+    "material": "minecart",
+    "type": 328
+  },
+  {
+    "meta": 0,
+    "name": "Saddle",
+    "material": "saddle",
+    "type": 329
+  },
+  {
+    "meta": 0,
+    "name": "Iron Door",
+    "material": "iron_door",
+    "type": 330
+  },
+  {
+    "meta": 0,
+    "name": "Redstone",
+    "material": "redstone",
+    "type": 331
+  },
+  {
+    "meta": 0,
+    "name": "Snowball",
+    "material": "snowball",
+    "type": 332
+  },
+  {
+    "meta": 0,
+    "name": "Oak Boat",
+    "material": "boat",
+    "type": 333
+  },
+  {
+    "meta": 0,
+    "name": "Leather",
+    "material": "leather",
+    "type": 334
+  },
+  {
+    "meta": 0,
+    "name": "Milk Bucket",
+    "material": "milk_bucket",
+    "type": 335
+  },
+  {
+    "meta": 0,
+    "name": "Brick",
+    "material": "brick",
+    "type": 336
+  },
+  {
+    "meta": 0,
+    "name": "Clay",
+    "material": "clay_ball",
+    "type": 337
+  },
+  {
+    "meta": 0,
+    "name": "Sugar Canes",
+    "material": "reeds",
+    "type": 338
+  },
+  {
+    "meta": 0,
+    "name": "Paper",
+    "material": "paper",
+    "type": 339
+  },
+  {
+    "meta": 0,
+    "name": "Book",
+    "material": "book",
+    "type": 340
+  },
+  {
+    "meta": 0,
+    "name": "Slimeball",
+    "material": "slime_ball",
+    "type": 341
+  },
+  {
+    "meta": 0,
+    "name": "Minecart with Chest",
+    "material": "chest_minecart",
+    "type": 342
+  },
+  {
+    "meta": 0,
+    "name": "Minecart with Furnace",
+    "material": "furnace_minecart",
+    "type": 343
+  },
+  {
+    "meta": 0,
+    "name": "Egg",
+    "material": "egg",
+    "type": 344
+  },
+  {
+    "meta": 0,
+    "name": "Compass",
+    "material": "compass",
+    "type": 345
+  },
+  {
+    "meta": 0,
+    "name": "Fishing Rod",
+    "material": "fishing_rod",
+    "type": 346
+  },
+  {
+    "meta": 0,
+    "name": "Clock",
+    "material": "clock",
+    "type": 347
+  },
+  {
+    "meta": 0,
+    "name": "Glowstone Dust",
+    "material": "glowstone_dust",
+    "type": 348
+  },
+  {
+    "meta": 0,
+    "name": "Raw Fish",
+    "material": "fish",
+    "type": 349
+  },
+  {
+    "meta": 1,
+    "name": "Raw Salmon",
+    "material": "fish",
+    "type": 349
+  },
+  {
+    "meta": 2,
+    "name": "Clownfish",
+    "material": "fish",
+    "type": 349
+  },
+  {
+    "meta": 3,
+    "name": "Pufferfish",
+    "material": "fish",
+    "type": 349
+  },
+  {
+    "meta": 0,
+    "name": "Cooked Fish",
+    "material": "cooked_fish",
+    "type": 350
+  },
+  {
+    "meta": 1,
+    "name": "Cooked Salmon",
+    "material": "cooked_fish",
+    "type": 350
+  },
+  {
+    "meta": 0,
+    "name": "Ink Sack",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 1,
+    "name": "Rose Red",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 2,
+    "name": "Cactus Green",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 3,
+    "name": "Coco Beans",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 4,
+    "name": "Lapis Lazuli",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 5,
+    "name": "Purple Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 6,
+    "name": "Cyan Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 7,
+    "name": "Light Gray Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 8,
+    "name": "Gray Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 9,
+    "name": "Pink Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 10,
+    "name": "Lime Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 11,
+    "name": "Dandelion Yellow",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 12,
+    "name": "Light Blue Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 13,
+    "name": "Magenta Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 14,
+    "name": "Orange Dye",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 15,
+    "name": "Bone Meal",
+    "material": "dye",
+    "type": 351
+  },
+  {
+    "meta": 0,
+    "name": "Bone",
+    "material": "bone",
+    "type": 352
+  },
+  {
+    "meta": 0,
+    "name": "Sugar",
+    "material": "sugar",
+    "type": 353
+  },
+  {
+    "meta": 0,
+    "name": "Cake",
+    "material": "cake_block",
+    "type": 354
+  },
+  {
+    "meta": 0,
+    "name": "Bed Block",
+    "material": "bed_block",
+    "type": 355,
+    "cardinal" : "South"
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Repeater",
+    "material": "diode_block_on",
+    "type": 356
+  },
+  {
+    "meta": 0,
+    "name": "Cookie",
+    "material": "cookie",
+    "type": 357
+  },
+  {
+    "meta": 0,
+    "name": "Map",
+    "material": "filled_map",
+    "type": 358
+  },
+  {
+    "meta": 0,
+    "name": "Shears",
+    "material": "shears",
+    "type": 359
+  },
+  {
+    "meta": 0,
+    "name": "Melon",
+    "material": "melon",
+    "type": 360
+  },
+  {
+    "meta": 0,
+    "name": "Pumpkin Seeds",
+    "material": "pumpkin_seeds",
+    "type": 361
+  },
+  {
+    "meta": 0,
+    "name": "Melon Seeds",
+    "material": "melon_seeds",
+    "type": 362
+  },
+  {
+    "meta": 0,
+    "name": "Raw Beef",
+    "material": "beef",
+    "type": 363
+  },
+  {
+    "meta": 0,
+    "name": "Steak",
+    "material": "cooked_beef",
+    "type": 364
+  },
+  {
+    "meta": 0,
+    "name": "Raw Chicken",
+    "material": "chicken",
+    "type": 365
+  },
+  {
+    "meta": 0,
+    "name": "Cooked Chicken",
+    "material": "cooked_chicken",
+    "type": 366
+  },
+  {
+    "meta": 0,
+    "name": "Rotten Flesh",
+    "material": "rotten_flesh",
+    "type": 367
+  },
+  {
+    "meta": 0,
+    "name": "Ender Pearl",
+    "material": "ender_pearl",
+    "type": 368
+  },
+  {
+    "meta": 0,
+    "name": "Blaze Rod",
+    "material": "blaze_rod",
+    "type": 369
+  },
+  {
+    "meta": 0,
+    "name": "Ghast Tear",
+    "material": "ghast_tear",
+    "type": 370
+  },
+  {
+    "meta": 0,
+    "name": "Gold Nugget",
+    "material": "gold_nugget",
+    "type": 371
+  },
+  {
+    "meta": 0,
+    "name": "Nether Wart",
+    "material": "nether_wart",
+    "type": 372
+  },
+  {
+    "meta": 0,
+    "name": "Potion",
+    "material": "potion",
+    "type": 373
+  },
+  {
+    "meta": 0,
+    "name": "Glass Bottle",
+    "material": "glass_bottle",
+    "type": 374
+  },
+  {
+    "meta": 0,
+    "name": "Spider Eye",
+    "material": "spider_eye",
+    "type": 375
+  },
+  {
+    "meta": 0,
+    "name": "Fermented Spider Eye",
+    "material": "fermented_spider_eye",
+    "type": 376
+  },
+  {
+    "meta": 0,
+    "name": "Blaze Powder",
+    "material": "blaze_powder",
+    "type": 377
+  },
+  {
+    "meta": 0,
+    "name": "Magma Cream",
+    "material": "magma_cream",
+    "type": 378
+  },
+  {
+    "meta": 0,
+    "name": "Brewing Stand",
+    "material": "brewing_stand",
+    "type": 379
+  },
+  {
+    "meta": 0,
+    "name": "Cauldron",
+    "material": "cauldron",
+    "type": 380
+  },
+  {
+    "meta": 0,
+    "name": "Eye of Ender",
+    "material": "ender_eye",
+    "type": 381
+  },
+  {
+    "meta": 0,
+    "name": "Glistering Melon",
+    "material": "speckled_melon",
+    "type": 382
+  },
+  {
+    "meta": 50,
+    "name": "Spawn Creeper",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 51,
+    "name": "Spawn Skeleton",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 52,
+    "name": "Spawn Spider",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 54,
+    "name": "Spawn Zombie",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 55,
+    "name": "Spawn Slime",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 56,
+    "name": "Spawn Ghast",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 57,
+    "name": "Spawn Pigman",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 58,
+    "name": "Spawn Enderman",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 59,
+    "name": "Spawn Cave Spider",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 60,
+    "name": "Spawn Silverfish",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 61,
+    "name": "Spawn Blaze",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 62,
+    "name": "Spawn Magma Cube",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 65,
+    "name": "Spawn Bat",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 66,
+    "name": "Spawn Witch",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 67,
+    "name": "Spawn Endermite",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 68,
+    "name": "Spawn Guardian",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 69,
+    "name": "Spawn Shulker",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 90,
+    "name": "Spawn Pig",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 91,
+    "name": "Spawn Sheep",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 92,
+    "name": "Spawn Cow",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 93,
+    "name": "Spawn Chicken",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 94,
+    "name": "Spawn Squid",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 95,
+    "name": "Spawn Wolf",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 96,
+    "name": "Spawn Mooshroom",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 98,
+    "name": "Spawn Ocelot",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 100,
+    "name": "Spawn Horse",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 101,
+    "name": "Spawn Rabbit",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 120,
+    "name": "Spawn Villager",
+    "material": "spawn_egg",
+    "type": 383
+  },
+  {
+    "meta": 0,
+    "name": "Bottle o' Enchanting",
+    "material": "experience_bottle",
+    "type": 384
+  },
+  {
+    "meta": 0,
+    "name": "Fire Charge",
+    "material": "fire_charge",
+    "type": 385
+  },
+  {
+    "meta": 0,
+    "name": "Book and Quill",
+    "material": "writable_book",
+    "type": 386
+  },
+  {
+    "meta": 0,
+    "name": "Written Book",
+    "material": "written_book",
+    "type": 387
+  },
+  {
+    "meta": 0,
+    "name": "Emerald",
+    "material": "emerald",
+    "type": 388
+  },
+  {
+    "meta": 0,
+    "name": "Item Frame",
+    "material": "item_frame",
+    "type": 389
+  },
+  {
+    "meta": 0,
+    "name": "Flower Pot",
+    "material": "flower_pot",
+    "type": 390
+  },
+  {
+    "meta": 0,
+    "name": "Carrot",
+    "material": "carrot",
+    "type": 391
+  },
+  {
+    "meta": 0,
+    "name": "Potato",
+    "material": "potato",
+    "type": 392
+  },
+  {
+    "meta": 0,
+    "name": "Baked Potato",
+    "material": "baked_potato",
+    "type": 393
+  },
+  {
+    "meta": 0,
+    "name": "Poisonous Potato",
+    "material": "poisonous_potato",
+    "type": 394
+  },
+  {
+    "meta": 0,
+    "name": "Empty Map",
+    "material": "map",
+    "type": 395
+  },
+  {
+    "meta": 0,
+    "name": "Golden Carrot",
+    "material": "golden_carrot",
+    "type": 396
+  },
+  {
+    "meta": 0,
+    "name": "Mob Head (Skeleton)",
+    "material": "skull",
+    "type": 397
+  },
+  {
+    "meta": 1,
+    "name": "Mob Head (Wither Skeleton)",
+    "material": "skull",
+    "type": 397
+  },
+  {
+    "meta": 2,
+    "name": "Mob Head (Zombie)",
+    "material": "skull",
+    "type": 397
+  },
+  {
+    "meta": 3,
+    "name": "Mob Head (Human)",
+    "material": "skull",
+    "type": 397
+  },
+  {
+    "meta": 4,
+    "name": "Mob Head (Creeper)",
+    "material": "skull",
+    "type": 397
+  },
+  {
+    "meta": 5,
+    "name": "Mob Head (Dragon)",
+    "material": "skull",
+    "type": 397
+  },
+  {
+    "meta": 0,
+    "name": "Carrot on a Stick",
+    "material": "carrot_on_a_stick",
+    "type": 398
+  },
+  {
+    "meta": 0,
+    "name": "Nether Star",
+    "material": "nether_star",
+    "type": 399
+  },
+  {
+    "meta": 0,
+    "name": "Pumpkin Pie",
+    "material": "pumpkin_pie",
+    "type": 400
+  },
+  {
+    "meta": 0,
+    "name": "Firework Rocket",
+    "material": "fireworks",
+    "type": 401
+  },
+  {
+    "meta": 0,
+    "name": "Firework Star",
+    "material": "firework_charge",
+    "type": 402
+  },
+  {
+    "meta": 0,
+    "name": "Enchanted Book",
+    "material": "enchanted_book",
+    "type": 403
+  },
+  {
+    "meta": 0,
+    "name": "Redstone Comparator",
+    "material": "redstone_comparator_off",
+    "type": 404
+  },
+  {
+    "meta": 0,
+    "name": "Nether Brick",
+    "material": "netherbrick",
+    "type": 405
+  },
+  {
+    "meta": 0,
+    "name": "Nether Quartz",
+    "material": "quartz",
+    "type": 406
+  },
+  {
+    "meta": 0,
+    "name": "Minecart with TNT",
+    "material": "tnt_minecart",
+    "type": 407
+  },
+  {
+    "meta": 0,
+    "name": "Minecart with Hopper",
+    "material": "hopper_minecart",
+    "type": 408
+  },
+  {
+    "meta": 0,
+    "name": "Prismarine Shard",
+    "material": "prismarine_shard",
+    "type": 409
+  },
+  {
+    "meta": 0,
+    "name": "Prismarine Crystals",
+    "material": "prismarine_crystals",
+    "type": 410
+  },
+  {
+    "meta": 0,
+    "name": "Raw Rabbit",
+    "material": "rabbit",
+    "type": 411
+  },
+  {
+    "meta": 0,
+    "name": "Cooked Rabbit",
+    "material": "cooked_rabbit",
+    "type": 412
+  },
+  {
+    "meta": 0,
+    "name": "Rabbit Stew",
+    "material": "rabbit_stew",
+    "type": 413
+  },
+  {
+    "meta": 0,
+    "name": "Rabbit's Foot",
+    "material": "rabbit_foot",
+    "type": 414
+  },
+  {
+    "meta": 0,
+    "name": "Rabbit Hide",
+    "material": "rabbit_hide",
+    "type": 415
+  },
+  {
+    "meta": 0,
+    "name": "Armor Stand",
+    "material": "armor_stand",
+    "type": 416
+  },
+  {
+    "meta": 0,
+    "name": "Iron Horse Armor",
+    "material": "iron_horse_armor",
+    "type": 417
+  },
+  {
+    "meta": 0,
+    "name": "Golden Horse Armor",
+    "material": "golden_horse_armor",
+    "type": 418
+  },
+  {
+    "meta": 0,
+    "name": "Diamond Horse Armor",
+    "material": "diamond_horse_armor",
+    "type": 419
+  },
+  {
+    "meta": 0,
+    "name": "Lead",
+    "material": "lead",
+    "type": 420
+  },
+  {
+    "meta": 0,
+    "name": "Name Tag",
+    "material": "name_tag",
+    "type": 421
+  },
+  {
+    "meta": 0,
+    "name": "Minecart with Command Block",
+    "material": "command_block_minecart",
+    "type": 422
+  },
+  {
+    "meta": 0,
+    "name": "Raw Mutton",
+    "material": "mutton",
+    "type": 423
+  },
+  {
+    "meta": 0,
+    "name": "Cooked Mutton",
+    "material": "cooked_mutton",
+    "type": 424
+  },
+  {
+    "meta": 0,
+    "name": "Banner",
+    "material": "banner",
+    "type": 425
+  },
+  {
+    "meta": 0,
+    "name": "Spruce Door",
+    "material": "spruce_door",
+    "type": 427
+  },
+  {
+    "meta": 0,
+    "name": "Birch Door",
+    "material": "birch_door",
+    "type": 428
+  },
+  {
+    "meta": 0,
+    "name": "Jungle Door",
+    "material": "jungle_door",
+    "type": 429
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Door",
+    "material": "acacia_door",
+    "type": 430
+  },
+  {
+    "meta": 0,
+    "name": "Dark Oak Door",
+    "material": "dark_oak_door",
+    "type": 431
+  },
+  {
+    "meta": 0,
+    "name": "Chorus Fruit",
+    "material": "chorus_fruit",
+    "type": 432
+  },
+  {
+    "meta": 0,
+    "name": "Popped Chorus Fruit",
+    "material": "popped_chorus_fruit",
+    "type": 433
+  },
+  {
+    "meta": 0,
+    "name": "Beetroot",
+    "material": "beetroot",
+    "type": 434
+  },
+  {
+    "meta": 0,
+    "name": "Beetroot Seeds",
+    "material": "beetroot_seeds",
+    "type": 435
+  },
+  {
+    "meta": 0,
+    "name": "Beetroot Soup",
+    "material": "beetroot_soup",
+    "type": 436
+  },
+  {
+    "meta": 0,
+    "name": "Dragon's Breath",
+    "material": "dragon_breath",
+    "type": 437
+  },
+  {
+    "meta": 0,
+    "name": "Splash Potion",
+    "material": "splash_potion",
+    "type": 438
+  },
+  {
+    "meta": 0,
+    "name": "Spectral Arrow",
+    "material": "spectral_arrow",
+    "type": 439
+  },
+  {
+    "meta": 0,
+    "name": "Tipped Arrow",
+    "material": "tipped_arrow",
+    "type": 440
+  },
+  {
+    "meta": 0,
+    "name": "Lingering Potion",
+    "material": "lingering_potion",
+    "type": 441
+  },
+  {
+    "meta": 0,
+    "name": "Shield",
+    "material": "shield",
+    "type": 442
+  },
+  {
+    "meta": 0,
+    "name": "Elytra",
+    "material": "elytra",
+    "type": 443
+  },
+  {
+    "meta": 0,
+    "name": "Spruce Boat",
+    "material": "spruce_boat",
+    "type": 444
+  },
+  {
+    "meta": 0,
+    "name": "Birch Boat",
+    "material": "birch_boat",
+    "type": 445
+  },
+  {
+    "meta": 0,
+    "name": "Jungle Boat",
+    "material": "jungle_boat",
+    "type": 446
+  },
+  {
+    "meta": 0,
+    "name": "Acacia Boat",
+    "material": "acacia_boat",
+    "type": 447
+  },
+  {
+    "meta": 0,
+    "name": "Dark Oak Boat",
+    "material": "dark_oak_boat",
+    "type": 448
+  },
+  {
+    "meta": 0,
+    "name": "13 Disc",
+    "material": "record_13",
+    "type": 2256
+  },
+  {
+    "meta": 0,
+    "name": "Cat Disc",
+    "material": "record_cat",
+    "type": 2257
+  },
+  {
+    "meta": 0,
+    "name": "Blocks Disc",
+    "material": "record_blocks",
+    "type": 2258
+  },
+  {
+    "meta": 0,
+    "name": "Chirp Disc",
+    "material": "record_chirp",
+    "type": 2259
+  },
+  {
+    "meta": 0,
+    "name": "Far Disc",
+    "material": "record_far",
+    "type": 2260
+  },
+  {
+    "meta": 0,
+    "name": "Mall Disc",
+    "material": "record_mall",
+    "type": 2261
+  },
+  {
+    "meta": 0,
+    "name": "Mellohi Disc",
+    "material": "record_mellohi",
+    "type": 2262
+  },
+  {
+    "meta": 0,
+    "name": "Stal Disc",
+    "material": "record_stal",
+    "type": 2263
+  },
+  {
+    "meta": 0,
+    "name": "Strad Disc",
+    "material": "record_strad",
+    "type": 2264
+  },
+  {
+    "meta": 0,
+    "name": "Ward Disc",
+    "material": "record_ward",
+    "type": 2265
+  },
+  {
+    "meta": 0,
+    "name": "11 Disc",
+    "material": "record_11",
+    "type": 2266
+  },
+  {
+    "meta": 0,
+    "name": "Wait Disc",
+    "material": "record_wait",
+    "type": 2267
+  },
+  {
+      "meta": 0,
+      "name": "Magma Block",
+      "material": "magma",
+      "type": 213
+  }
+]

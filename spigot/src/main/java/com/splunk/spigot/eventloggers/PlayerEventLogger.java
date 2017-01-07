@@ -1,14 +1,16 @@
 package com.splunk.spigot.eventloggers;
 
 
-import com.splunk.sharedmc.event_loggers.AbstractEventLogger;
-import com.splunk.sharedmc.loggable_events.LoggablePlayerEvent;
-import com.splunk.sharedmc.loggable_events.LoggablePlayerEvent.PlayerEventAction;
-import com.splunk.sharedmc.utilities.LivingEntity;
-import com.splunk.sharedmc.utilities.Point3d;
+import com.splunk.sharedmc.logger.AbstractEventLogger;
+import com.splunk.sharedmc.logger.actions.PlayerEventAction;
+import com.splunk.sharedmc.logger.events.LoggablePlayerEvent;
+import com.splunk.sharedmc.logger.entities.LoggableLivingEntity;
+import com.splunk.sharedmc.logger.utilities.Point3d;
 
+import com.splunk.spigot.utilities.EntityUtil;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -66,22 +68,15 @@ public class PlayerEventLogger extends AbstractEventLogger implements Listener {
 
         LoggablePlayerEvent playerEvent = new LoggablePlayerEvent(world.getFullTime(), minecraft_server, world.getName(), action);
 
-        LivingEntity eventPlayer = new LivingEntity("player", player.getDisplayName());
+        LoggableLivingEntity eventPlayer = (LoggableLivingEntity)EntityUtil.getLoggableEntity(player);
 
-        eventPlayer.setMaxHealth(player.getMaxHealth());
-        eventPlayer.setCurrentHealth(player.getHealth());
-
-
-        for (PotionEffect potion : player.getActivePotionEffects()) {
-            eventPlayer.addPotions(potion.getType().getName() + ":" + potion.getAmplifier());
-        }
         playerEvent.setPlayer(eventPlayer);
 
         if (event instanceof PlayerMoveEvent) {
 
             // Teleport is a child class so this is to allow us to identify the child class
             if (event instanceof PlayerTeleportEvent)
-                playerEvent.setAction("Teleport"); // Should use the action enum instead of the string.
+                playerEvent.setAction("teleport"); // Should use the action enum instead of the string.
 
             // The coordinates from the event and the destination of the move event are slightly different so this corrects that.
             Point3d destination = new Point3d(((PlayerMoveEvent) event).getTo().getX(), ((PlayerMoveEvent) event).getTo().getY(), ((PlayerMoveEvent) event).getTo().getZ());

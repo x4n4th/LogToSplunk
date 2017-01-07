@@ -3,4 +3,5 @@ main: com.splunk.spigot.LogToSplunkPlugin
 version: ${project.version}
 description: This plugin registers event handlers and logs events to Splunk via the Splunk HTTP Event Collector.
 author: PowerSchill
+load: STARTUP
 website: https://github.com/PowerSchill/LogToSplunk

@@ -1,8 +1,6 @@
-package com.splunk.sharedmc.event_loggers;
+package com.splunk.sharedmc.logger;
 
-import com.splunk.sharedmc.SingleSplunkConnection;
-import com.splunk.sharedmc.loggable_events.LoggableEvent;
-
+import com.splunk.sharedmc.logger.events.LoggableEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,7 +9,7 @@ import java.util.Properties;
 /**
  * EventLoggers log to the Minecraft minecraft_server console and send data to Splunk.
  */
-public class AbstractEventLogger {
+public abstract class AbstractEventLogger {
     public static final String LOGGER_NAME = "LogToSplunk";
 
     public static final String LOG_EVENTS_TO_CONSOLE_PROP_KEY = "splunk.craft.enable.consolelogging";

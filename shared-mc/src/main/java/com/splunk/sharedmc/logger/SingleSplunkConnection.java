@@ -1,4 +1,4 @@
-package com.splunk.sharedmc;
+package com.splunk.sharedmc.logger;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;

@@ -17,17 +17,36 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
-                    <include>**/plugin.yml</include>
+                    <include>**/**</include>
                 </includes>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
                 <excludes>
-                    <exclude>**/plugin.yml</exclude>
+                    <exclude>**/**</exclude>
                 </excludes>
             </resource>
         </resources>
+        <finalName>LogToSplunk-${project.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <configuration>
+                    <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
+                </configuration>
+                <version>2.4.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
     <repositories>
         <repository>

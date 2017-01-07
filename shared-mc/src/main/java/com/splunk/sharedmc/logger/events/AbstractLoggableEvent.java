@@ -1,4 +1,4 @@
-package com.splunk.sharedmc.loggable_events;
+package com.splunk.sharedmc.logger.events;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -8,7 +8,7 @@ import com.google.gson.GsonBuilder;
  * Classes extending this benefit from a convenient way to get a Json representation, time of
  * creation and event type, world name, coordinates and location.
  */
-public class AbstractLoggableEvent implements LoggableEvent {
+public abstract class AbstractLoggableEvent implements LoggableEvent {
 
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     protected String category;
