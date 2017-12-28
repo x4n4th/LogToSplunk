@@ -64,6 +64,10 @@ public class MCItemCatalogue implements Iterable<MCItem> {
         int meta = state.getData().toItemStack().getDurability();
 
 
+        return getBlockName(material, meta);
+    }
+
+    public String getBlockName(String material, int meta) throws Exception{
         MCItem item = this.mcItems.get(material + meta);
 
         if(item == null){

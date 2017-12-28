@@ -62,6 +62,10 @@ public enum EntityUtil {;
     public static LoggableInstrument getInstrument(Player p){
         ItemStack instrument = p.getInventory().getItemInMainHand();
 
+        return EntityUtil.getInstrument(instrument);
+    }
+
+    public static LoggableInstrument getInstrument(ItemStack instrument){
         // Some items have "_ITEM" appended to the end.
         String instrumentName = instrument.getType().toString().replaceAll("_ITEM$","");
 
@@ -77,5 +81,6 @@ public enum EntityUtil {;
 
         return tool;
     }
+
 
 }
